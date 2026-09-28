@@ -1,0 +1,3 @@
+﻿model	imputations	n	events	global_sleep_wald	global_sleep_p
+MI_Model2_confounder	20	37516	1003	19.83515530050121	0.0005382413290123013
+MI_Model3_health_status	20	37516	1003	14.60221823441582	0.005601504913704619

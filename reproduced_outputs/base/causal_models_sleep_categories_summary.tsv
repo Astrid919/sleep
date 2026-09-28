@@ -1,0 +1,6 @@
+﻿cohort	model	n	events	global_sleep_wald	global_sleep_p	global_sleep_P
+full_common_sample	Model1_demographic	32880	875	19.291460453419813	0.000688791921957657	<0.001
+full_common_sample	Model2_confounder	32880	875	15.05482569275974	0.004588845409044743	0.005
+full_common_sample	Model3_health_status	32880	875	10.478221361472313	0.03309831091616046	0.033
+baseline_CVD_free	CVD_free_Model2_confounder	30096	531	11.528282915306583	0.021226473772164682	0.021
+baseline_CVD_free	CVD_free_Model3_health_status	30096	531	9.257406299019676	0.05497789518086461	0.055

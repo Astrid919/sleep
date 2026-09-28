@@ -1,0 +1,11 @@
+﻿check	value	status
+pooled_weight	WTMEC2YR/7	PASS
+variance_design	stratified PSU sandwich covariance	PASS
+explicit_stratum_identifier	cycle_index*1000 + SDMVSTRA	PASS
+explicit_PSU_identifier	cycle_index*100000 + SDMVSTRA*10 + SDMVPSU	PASS
+cross_cycle_raw_stratum_collisions	0	PASS
+cross_cycle_raw_stratum_PSU_collisions	0	PASS
+max_abs_beta_difference_nested_vs_released	0.0	PASS
+max_abs_covariance_difference_nested_vs_released	0.0	PASS
+analytic_sample_n	32880	PASS
+heart_deaths	875	PASS

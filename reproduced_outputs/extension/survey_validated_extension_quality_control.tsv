@@ -1,0 +1,7 @@
+﻿metric	value
+common_complete_case_n	32880
+heart_deaths	875
+other_cause_deaths	2629
+bootstrap_replicates	500
+bootstrap_workers	3
+explicit_cycle_nesting	True

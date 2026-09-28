@@ -1,0 +1,16 @@
+﻿metric	value	unit
+analytic_sample_n	32880	participants
+heart_disease_deaths	875	deaths
+other_cause_deaths	2629	deaths
+total_person_years	248923.58333333334	person-years
+crude_heart_disease_rate	3.5151349995965964	per 1,000 person-years
+survey_weighted_heart_disease_rate	2.393023678407219	per 1,000 weighted person-years
+observed_follow_up_weighted_Q1	4.083333333333333	years
+observed_follow_up_weighted_median	7.5	years
+observed_follow_up_weighted_Q3	11.0	years
+observed_follow_up_unweighted_Q1	4.166666666666667	years
+observed_follow_up_unweighted_median	7.5	years
+observed_follow_up_unweighted_Q3	10.833333333333334	years
+reverse_KM_follow_up_Q1	4.416666666666667	years
+reverse_KM_follow_up_median	7.916666666666667	years
+reverse_KM_follow_up_Q3	11.333333333333334	years

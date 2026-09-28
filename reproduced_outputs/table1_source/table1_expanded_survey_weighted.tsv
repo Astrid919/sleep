@@ -1,0 +1,47 @@
+﻿Characteristic	Overall	No heart disease death	Heart disease death
+Age, years	47.34 (17.01)	46.90 (16.77)	70.47 (12.56)
+Sleep duration, h/night	7.09 (1.36)	7.09 (1.35)	7.18 (1.57)
+Poverty-income ratio	3.01 (1.64); missing 3,370	3.02 (1.65); missing 3,300	2.38 (1.44); missing 70
+BMI, kg/m2	29.00 (6.88); missing 527	28.99 (6.87); missing 474	29.80 (7.48); missing 53
+Sleep-duration group			
+  <6 h	5,155 (11.6%)	5,007 (11.5%)	148 (13.6%)
+  6-<7 h	7,987 (20.7%)	7,792 (20.7%)	195 (19.9%)
+  7-<8 h	9,958 (29.5%)	9,776 (29.7%)	182 (20.1%)
+  8-<9 h	10,132 (27.5%)	9,828 (27.5%)	304 (29.5%)
+  >=9 h	4,284 (10.7%)	4,110 (10.6%)	174 (16.9%)
+Sex			
+  Male	18,155 (48.2%)	17,576 (48.1%)	579 (53.4%)
+  Female	19,361 (51.8%)	18,937 (51.9%)	424 (46.6%)
+Race/ethnicity			
+  Mexican American	5,885 (8.5%)	5,809 (8.6%)	76 (3.9%)
+  Other Hispanic	3,578 (5.6%)	3,525 (5.6%)	53 (2.4%)
+  Non-Hispanic White	15,671 (66.8%)	15,050 (66.6%)	621 (78.4%)
+  Non-Hispanic Black	8,112 (11.3%)	7,890 (11.3%)	222 (12.1%)
+  Other race	4,270 (7.8%)	4,239 (7.9%)	31 (3.2%)
+Education	missing 46	missing 41	missing 5
+  <High school	9,390 (16.2%)	9,016 (15.9%)	374 (29.5%)
+  High school/GED	8,582 (23.2%)	8,326 (23.1%)	256 (28.9%)
+  >High school	19,498 (60.6%)	19,130 (61.0%)	368 (41.6%)
+Poverty-income ratio group	missing 3,370	missing 3,300	missing 70
+  <1.30	10,766 (21.3%)	10,433 (21.1%)	333 (29.1%)
+  1.30-3.49	12,951 (35.8%)	12,509 (35.6%)	442 (47.8%)
+  >=3.50	10,429 (42.9%)	10,271 (43.3%)	158 (23.1%)
+BMI group	missing 527	missing 474	missing 53
+  <25	10,732 (30.0%)	10,477 (30.1%)	255 (26.7%)
+  25-29.9	12,235 (32.9%)	11,911 (32.9%)	324 (31.0%)
+  >=30	14,022 (37.1%)	13,651 (37.0%)	371 (42.3%)
+Ever smoked 100 cigarettes	missing 25	missing 25	
+  Never smoker	20,857 (55.3%)	20,402 (55.5%)	455 (45.8%)
+  Ever smoker	16,634 (44.7%)	16,086 (44.5%)	548 (54.2%)
+Marital status	missing 23	missing 23	
+  Married/partner	22,369 (63.4%)	21,902 (63.7%)	467 (49.3%)
+  Not married/partner	15,124 (36.6%)	14,588 (36.3%)	536 (50.7%)
+Hypertension history	missing 3	missing 3	
+  No	21,682 (62.5%)	21,461 (63.3%)	221 (22.7%)
+  Yes	15,831 (37.5%)	15,049 (36.7%)	782 (77.3%)
+Diabetes history	missing 688	missing 687	missing 1
+  No	29,857 (85.9%)	29,265 (86.4%)	592 (63.1%)
+  Yes	6,971 (14.1%)	6,561 (13.6%)	410 (36.9%)
+Prevalent CVD	missing 156	missing 147	missing 9
+  No	34,169 (93.2%)	33,569 (93.8%)	600 (61.6%)
+  Yes	3,191 (6.8%)	2,797 (6.2%)	394 (38.4%)

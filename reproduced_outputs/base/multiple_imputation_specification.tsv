@@ -1,0 +1,7 @@
+﻿component	specification
+Imputations	20
+Continuous variables	Weighted Bayesian linear draws with predictive mean matching (PIR and BMI).
+Education	Weighted Bayesian multinomial logistic draws for the three collapsed categories.
+Binary variables	Weighted Bayesian logistic draws.
+Survival information	Heart-disease event indicator, other-cause-death indicator, follow-up time, and weighted Nelson-Aalen cumulative heart-disease hazard.
+Survey information	MEC 14-year weight, released masked stratum and PSU, and NHANES cycle indicators included as predictors; completed datasets analyzed with cycle-nested stratified-PSU covariance.

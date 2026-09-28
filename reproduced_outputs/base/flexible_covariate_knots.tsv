@@ -1,0 +1,4 @@
+﻿variable	percentiles	knots
+age	5,35,65,95	22,39,54,78
+pir_value	5,35,65,95	0.54,2.03,4.143,5
+bmi_value	5,35,65,95	20.09,25.7,30.4,41.9

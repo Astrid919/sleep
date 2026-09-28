@@ -1,0 +1,2 @@
+﻿model	knots	reference_sleep_hours	n	events	p_overall	P_overall	p_nonlinear	P_nonlinear	minimum_grid_sleep_hours	converged	iterations
+Model3_prespecified_RCS	5.0,6.0,7.0,8.0,9.0	7	32880	875	0.02225887797258657	0.022	0.029501966784637384	0.030	7.05	True	8

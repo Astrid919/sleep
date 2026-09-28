@@ -1,0 +1,3 @@
+﻿model	HR	lower_95	upper_95	E_value_point	E_value_CI_bound	guardrail
+Model2_confounder	1.697740830154388	1.2973965168824977	2.2216214463865063	2.7861263759142174	1.9185576917287201	HR used as an approximate RR-scale sensitivity parameter because absolute risk is low; E-values do not control unmeasured confounding.
+Model3_health_status	1.5298630221333451	1.1784004368624221	1.9861507118265118	2.4302062035689724	1.6369057833253888	HR used as an approximate RR-scale sensitivity parameter because absolute risk is low; E-values do not control unmeasured confounding.

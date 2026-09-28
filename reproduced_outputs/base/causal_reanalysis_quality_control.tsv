@@ -1,0 +1,11 @@
+﻿metric	value
+expanded_cohort_n	37516
+expanded_cohort_heart_deaths	1003
+expanded_cohort_competing_deaths	3078
+common_complete_case_n	32880
+common_complete_case_heart_deaths	875
+strict_CVD_free_complete_case_n	30096
+strict_CVD_free_complete_case_heart_deaths	531
+SIRI_observed	35583
+SII_observed	35584
+multiple_imputations	20

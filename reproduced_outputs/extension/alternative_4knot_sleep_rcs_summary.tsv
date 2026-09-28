@@ -1,0 +1,3 @@
+﻿model	knots	knot_rule	overall_wald	overall_p	nonlinear_wald	nonlinear_p	n	events
+Model2_confounder	5.0,7.0,8.0,9.0	survey-weighted 5th, 35th, 65th, and 95th percentiles	13.50156138761479	0.0036684529806373044	11.433540840643127	0.0032903201124482727	32880	875
+Model3_health_status	5.0,7.0,8.0,9.0	survey-weighted 5th, 35th, 65th, and 95th percentiles	7.883864719490934	0.04847384891537546	5.625885762996803	0.06002807668281713	32880	875
