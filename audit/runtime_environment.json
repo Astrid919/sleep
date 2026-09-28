@@ -1,0 +1,14 @@
+{
+  "python": "3.12.13",
+  "implementation": "CPython",
+  "platform": "Windows-11-10.0.22621-SP0",
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "scipy": null,
+    "statsmodels": null,
+    "python-docx": "1.2.0",
+    "Pillow": "12.2.0",
+    "matplotlib": null
+  }
+}

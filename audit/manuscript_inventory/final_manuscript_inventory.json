@@ -1,0 +1,3171 @@
+{
+  "file": "G:\\BMC原始工程文件\\结果-心因死亡\\outputs\\final_submission_package_20260810\\manuscript\\Manuscript_final_audited_20260810.docx",
+  "file_bytes": 490523,
+  "file_sha256": "d979a429b826098f84a6c34b457160aedc5604162fdaee0ff8f45c412f971858",
+  "core_properties": {
+    "title": "Sleep duration and heart disease mortality: audited final manuscript",
+    "subject": "Complex-survey Cox, PH diagnostics, same-cycle lags, and absolute risk",
+    "author": "lenovo",
+    "keywords": "NHANES; sleep; heart disease mortality; complex survey; Cox; proportional hazards",
+    "last_modified_by": "chen"
+  },
+  "counts": {
+    "paragraphs": 128,
+    "tables": 4,
+    "captions": 10,
+    "references": 23,
+    "bracket_citation_occurrences": 15,
+    "embedded_media": 6,
+    "comments": 0,
+    "tracked_insertions": 0,
+    "tracked_deletions": 0
+  },
+  "blocks": [
+    {
+      "block": 1,
+      "kind": "paragraph",
+      "paragraph": 1,
+      "style": "Title",
+      "text": "Association between sleep duration and heart disease mortality among US adults: an NHANES 2005–2018 linked mortality analysis"
+    },
+    {
+      "block": 2,
+      "kind": "paragraph",
+      "paragraph": 2,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 3,
+      "kind": "paragraph",
+      "paragraph": 3,
+      "style": "Normal",
+      "text": "Author: Jiayi Chen"
+    },
+    {
+      "block": 4,
+      "kind": "paragraph",
+      "paragraph": 4,
+      "style": "Normal",
+      "text": "Affiliation: Department of AI and Big Data, GENERTEC Health Management Technology Co., Ltd., Beijing, China"
+    },
+    {
+      "block": 5,
+      "kind": "paragraph",
+      "paragraph": 5,
+      "style": "Normal",
+      "text": "Corresponding author: Jiayi Chen, jiayichen0919@gmail.com"
+    },
+    {
+      "block": 6,
+      "kind": "paragraph",
+      "paragraph": 6,
+      "style": "Normal",
+      "text": "Article type: Research Article"
+    },
+    {
+      "block": 7,
+      "kind": "paragraph",
+      "paragraph": 7,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 8,
+      "kind": "paragraph",
+      "paragraph": 8,
+      "style": "Heading 1",
+      "text": "Abstract"
+    },
+    {
+      "block": 9,
+      "kind": "paragraph",
+      "paragraph": 9,
+      "style": "Normal",
+      "text": "Background: Long sleep duration has been associated with higher cardiovascular mortality, but whether this association reflects a harmful effect of sleep itself or underlying health conditions remains uncertain. We aimed to characterize the association between sleep duration and heart disease mortality using a prespecified causal framework that distinguishes baseline confounding from health-status-related attenuation and evaluates the robustness of relative and absolute risk estimates."
+    },
+    {
+      "block": 10,
+      "kind": "paragraph",
+      "paragraph": 10,
+      "style": "Normal",
+      "text": "Methods: We analyzed adults aged ≥20 years from NHANES 2005–2018 linked mortality data. Sleep duration was categorized as <6, 6–<7, 7–<8, 8–<9, and ≥9 h/night, with 7–<8 h/night as the reference. Survey-weighted cause-specific Cox models estimated associations with heart disease mortality using NHANES design-based variance estimation. We examined nonlinear associations, proportional hazards, reverse-causation using lagged analyses, missing-data sensitivity using multiple imputation, competing risks, and regression-standardized absolute risks with uncertainty estimated from 500 stratified PSU bootstrap replicates."
+    },
+    {
+      "block": 11,
+      "kind": "paragraph",
+      "paragraph": 11,
+      "style": "Normal",
+      "text": "Results: Among 37,516 adults followed for mortality, 1,003 heart-disease deaths occurred. Compared with 7–<8 h/night, reporting ≥9 h/night was associated with higher heart-disease mortality in the primary survey-weighted Cox model (HR 1.70, 95% CI 1.30–2.22) and remained elevated after adjustment for health-status variables (HR 1.53, 95% CI 1.18–1.99). The association was consistent across spline analyses, lagged analyses, missing-data sensitivity analyses, and competing-risk approaches. In regression-standardized analyses, the estimated 10-year cumulative incidence was 2.88% for ≥9 h/night versus 1.87% for 7–<8 h/night (risk difference 1.01 percentage points, 95% bootstrap interval 0.61–1.45)."
+    },
+    {
+      "block": 12,
+      "kind": "paragraph",
+      "paragraph": 12,
+      "style": "Normal",
+      "text": "Conclusions: Long sleep duration was consistently associated with higher heart-disease mortality across survey-weighted models and sensitivity analyses. The attenuation after adjustment for health-status variables, persistence in lagged analyses, and quantitative bias analyses support interpreting ≥9 h/night as a marker of underlying health risk rather than evidence that extending sleep duration would reduce or increase mortality risk."
+    },
+    {
+      "block": 13,
+      "kind": "paragraph",
+      "paragraph": 13,
+      "style": "Normal",
+      "text": "Keywords: sleep duration; heart disease mortality; NHANES; mortality risk; observational cohort study"
+    },
+    {
+      "block": 14,
+      "kind": "paragraph",
+      "paragraph": 14,
+      "style": "Heading 1",
+      "text": "Introduction"
+    },
+    {
+      "block": 15,
+      "kind": "paragraph",
+      "paragraph": 15,
+      "style": "Normal",
+      "text": "Sleep is now regarded as part of cardiovascular health rather than merely a symptom or lifestyle correlate. Duration, timing, regularity, quality, and sleep-disordered breathing may influence autonomic activity, metabolism, inflammation, coagulation, and endothelial function [1-3]. Current consensus recommendations generally support at least 7 h of sleep for healthy adults [4], but observational studies often describe higher cardiovascular risk at both short and long durations [5, 6]."
+    },
+    {
+      "block": 16,
+      "kind": "paragraph",
+      "paragraph": 16,
+      "style": "Normal",
+      "text": "The shape of this association remains unsettled. Results differ with the study population, outcome definition, sleep measurement, reference group, and degree of covariate control. A previous NHANES analysis reported a U-shaped relation between sleep duration and all-cause or broadly defined cardiovascular mortality, with the lowest risk around 7 h [7]. Heart disease mortality, however, is a more specific endpoint than composite cardiovascular mortality and may show a different pattern."
+    },
+    {
+      "block": 17,
+      "kind": "paragraph",
+      "paragraph": 17,
+      "style": "Normal",
+      "text": "Long sleep is especially difficult to interpret because it may reflect poor sleep quality, depression, low physical activity, socioeconomic disadvantage, sleep-disordered breathing, frailty, or occult disease rather than a direct harmful exposure [8, 9, 11–14]. Short sleep has stronger experimental links to sympathetic and inflammatory activation [10], creating a mismatch between the best-established mechanism and the strongest epidemiologic signal. We therefore prioritized an explicit estimand, longer reverse-causation lags, survey-cycle influence checks, quantitative bias analysis, and absolute risks rather than adding prediction models."
+    },
+    {
+      "block": 18,
+      "kind": "paragraph",
+      "paragraph": 18,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 19,
+      "kind": "paragraph",
+      "paragraph": 19,
+      "style": "Heading 1",
+      "text": "Materials and methods"
+    },
+    {
+      "block": 20,
+      "kind": "paragraph",
+      "paragraph": 20,
+      "style": "Heading 2",
+      "text": "Study design and population"
+    },
+    {
+      "block": 21,
+      "kind": "paragraph",
+      "paragraph": 21,
+      "style": "Normal",
+      "text": "This observational cohort study combined seven NHANES cycles from 2005–2006 through 2017–2018 and linked participants to public-use mortality follow-up. NHANES uses a multistage probability design to represent the noninstitutionalized US population [15]. Adults with eligible mortality follow-up and sleep duration from 3 to 11 h/night formed the analytic cohort (n=37,516). SIRI and SII were not required for cohort entry because they were exploratory rather than primary adjustment variables."
+    },
+    {
+      "block": 22,
+      "kind": "paragraph",
+      "paragraph": 22,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 23,
+      "kind": "paragraph",
+      "paragraph": 23,
+      "style": "Caption",
+      "text": "Figure 1. Causal structures guiding model interpretation. Panel A shows the etiologic pathway of interest; Panel B shows an alternative in which underlying poor health causes both longer sleep and mortality. Solid arrows indicate assumed causal relations and dashed arrows mark temporally uncertain pathways. SIRI and SII were measured at the same baseline visit as sleep duration; therefore, pathway analyses are exploratory rather than causal mediation estimates [16–18]."
+    },
+    {
+      "block": 24,
+      "kind": "paragraph",
+      "paragraph": 24,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 25,
+      "kind": "paragraph",
+      "paragraph": 25,
+      "style": "Heading 2",
+      "text": "Exposure and outcome"
+    },
+    {
+      "block": 26,
+      "kind": "paragraph",
+      "paragraph": 26,
+      "style": "Normal",
+      "text": "Usual sleep duration was self-reported in hours per night and harmonized across cycles. It was analyzed in five clinically interpretable categories: <6, 6–<7, 7–<8, 8–<9, and ≥9 h/night, with 7–<8 h/night as the reference, and continuously with restricted cubic splines. The primary outcome was heart disease mortality, defined as MORTSTAT=1 and UCOD_LEADING=1. Other-cause deaths were censored in cause-specific Cox models and treated as competing events in Fine–Gray models [19]."
+    },
+    {
+      "block": 27,
+      "kind": "paragraph",
+      "paragraph": 27,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 28,
+      "kind": "paragraph",
+      "paragraph": 28,
+      "style": "Heading 2",
+      "text": "Covariates"
+    },
+    {
+      "block": 29,
+      "kind": "paragraph",
+      "paragraph": 29,
+      "style": "Normal",
+      "text": "Potential variable roles were assigned according to the conceptual framework shown in Figure 1. Age, sex, race/ethnicity, education, continuous poverty-income ratio (PIR), marital status, and smoking were treated as baseline confounders. BMI, hypertension, diabetes, and prevalent CVD were treated as health-status variables that may represent pre-existing disease, partial pathways, or both, and were examined in secondary adjustment models rather than the primary confounder model. Prevalent CVD was defined as a positive report of any heart failure, coronary heart disease, angina, or myocardial infarction; participants were classified as negative only when all four conditions were explicitly absent. SIRI was evaluated as an exploratory inflammatory correlate, with SII examined in sensitivity analyses. Sleep quality, sleep apnea, depression, physical activity, and frailty were incompletely measured or unavailable across cycles and therefore remained potential sources of residual confounding."
+    },
+    {
+      "block": 30,
+      "kind": "paragraph",
+      "paragraph": 30,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 31,
+      "kind": "paragraph",
+      "paragraph": 31,
+      "style": "Heading 2",
+      "text": "Analytic framework and model definitions"
+    },
+    {
+      "block": 32,
+      "kind": "paragraph",
+      "paragraph": 32,
+      "style": "Normal",
+      "text": "Model 1 adjusted for age, sex, and race/ethnicity as a demographic model. Model 2 was the primary confounder model and additionally adjusted for education, continuous PIR, marital status, and smoking. Model 3 was a health-status sensitivity model that additionally adjusted for continuous BMI, hypertension, diabetes, and prevalent CVD. These variables were not interpreted as a fully adjusted causal model because they may represent pre-existing disease, partial pathways, or markers of underlying health status. Age, PIR, and BMI were modeled using four-knot restricted cubic splines at survey-weighted 5th, 35th, 65th, and 95th percentiles. Sensitivity analyses examined attenuation after adding BMI, hypertension/diabetes, prevalent CVD, and log-SIRI separately to Model 2 using a common analytic sample."
+    },
+    {
+      "block": 33,
+      "kind": "paragraph",
+      "paragraph": 33,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 34,
+      "kind": "paragraph",
+      "paragraph": 34,
+      "style": "Heading 2",
+      "text": "Estimand framework and alignment of eligibility and time zero"
+    },
+    {
+      "block": 35,
+      "kind": "paragraph",
+      "paragraph": 35,
+      "style": "Normal",
+      "text": "Eligibility, exposure classification, and time zero were aligned at the NHANES examination [20]. The primary contrast was habitual sleep duration ≥9 versus 7–<8 h/night, followed from baseline to heart-disease death, competing death, or administrative censoring. The primary estimand was an observational survey-adjusted cause-specific hazard association under Model 2; the secondary risk-scale estimand was the regression-standardized 5- and 10-year cumulative incidence of heart-disease death accounting for competing deaths. These estimands describe associations rather than intervention effects: sleep duration was not randomized, a well-defined intervention corresponding to habitual sleep categories was not specified, and exchangeability cannot be guaranteed from the observed data."
+    },
+    {
+      "block": 36,
+      "kind": "paragraph",
+      "paragraph": 36,
+      "style": "Heading 2",
+      "text": "Statistical analysis"
+    },
+    {
+      "block": 37,
+      "kind": "paragraph",
+      "paragraph": 37,
+      "style": "Normal",
+      "text": "Baseline characteristics were summarized with the 14-year MEC weight (WTMEC2YR/7) without null-hypothesis tests [15]. Cause-specific Cox models incorporated NHANES sampling weights and design-based variance estimation using strata and PSUs. Survey design variables were audited after cycle pooling, including assessment of cross-cycle stratum and PSU uniqueness. Models 1–3 were compared using the same complete-case analytic sample. Sleep duration was modeled categorically and continuously using restricted cubic splines with prespecified knots at 5, 6, 7, 8, and 9 h/night; alternative percentile-based knots were examined in sensitivity analyses. Proportional hazards assumptions were evaluated using sleep-category × log(time) interactions."
+    },
+    {
+      "block": 38,
+      "kind": "paragraph",
+      "paragraph": 38,
+      "style": "Normal",
+      "text": "Potential reverse causation was explored by excluding prevalent CVD and using 2- and 5-year landmark analyses, including analyses restricted to comparable NHANES cycle composition. Missing covariates were addressed using 20 multiple imputations by chained equations incorporating exposure, outcomes, follow-up, survey design variables, and covariates [21]. Competing risks were evaluated using weighted Fine–Gray sensitivity analyses [19]. Regression-standardized cumulative incidence was estimated from cause-specific hazard models with uncertainty obtained from 500 stratified PSU bootstrap replicates [22]. Sensitivity to unmeasured confounding was examined using E-values and continuous bias contours [23]."
+    },
+    {
+      "block": 39,
+      "kind": "paragraph",
+      "paragraph": 39,
+      "style": "Heading 1",
+      "text": "Results"
+    },
+    {
+      "block": 40,
+      "kind": "paragraph",
+      "paragraph": 40,
+      "style": "Heading 2",
+      "text": "Study population"
+    },
+    {
+      "block": 41,
+      "kind": "paragraph",
+      "paragraph": 41,
+      "style": "Normal",
+      "text": "The analytic cohort included 37,516 adults with eligible NHANES mortality linkage and available sleep-duration data. During follow-up, 1,003 participants experienced heart disease mortality. The primary Cox analyses were conducted in a common complete-case sample of 32,880 participants, including 875 heart disease deaths and 2,629 deaths from other causes, contributing 248,924 person-years of follow-up. Median follow-up estimated using the reverse Kaplan–Meier method was 7.92 years (IQR, 4.42–11.33), and the weighted crude heart disease mortality rate was 2.39 per 1,000 person-years. Restricting analyses to participants free of prevalent CVD at baseline yielded 30,096 complete cases and 531 heart disease deaths."
+    },
+    {
+      "block": 42,
+      "kind": "paragraph",
+      "paragraph": 42,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 43,
+      "kind": "paragraph",
+      "paragraph": 43,
+      "style": "Caption",
+      "text": "Table 1. Baseline characteristics by heart disease mortality status"
+    },
+    {
+      "block": 44,
+      "kind": "table",
+      "table": 1,
+      "rows": [
+        [
+          "Characteristic",
+          "Overall (N=37,516)",
+          "No heart disease death (N=36,513)",
+          "Heart disease death (N=1,003)",
+          ""
+        ],
+        [
+          "Age, years",
+          "47.34 (17.01)",
+          "46.90 (16.77)",
+          "70.47 (12.56)",
+          ""
+        ],
+        [
+          "Sleep duration, h/night",
+          "7.09 (1.36)",
+          "7.09 (1.35)",
+          "7.18 (1.57)",
+          ""
+        ],
+        [
+          "Poverty-income ratio",
+          "3.01 (1.64); missing 3,370",
+          "3.02 (1.65); missing 3,300",
+          "2.38 (1.44); missing 70",
+          ""
+        ],
+        [
+          "BMI, kg/m2",
+          "29.00 (6.88); missing 527",
+          "28.99 (6.87); missing 474",
+          "29.80 (7.48); missing 53",
+          ""
+        ],
+        [
+          "Sleep-duration group",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "<6 h",
+          "5,155 (11.6%)",
+          "5,007 (11.5%)",
+          "148 (13.6%)",
+          ""
+        ],
+        [
+          "6-<7 h",
+          "7,987 (20.7%)",
+          "7,792 (20.7%)",
+          "195 (19.9%)",
+          ""
+        ],
+        [
+          "7-<8 h",
+          "9,958 (29.5%)",
+          "9,776 (29.7%)",
+          "182 (20.1%)",
+          ""
+        ],
+        [
+          "8-<9 h",
+          "10,132 (27.5%)",
+          "9,828 (27.5%)",
+          "304 (29.5%)",
+          ""
+        ],
+        [
+          ">=9 h",
+          "4,284 (10.7%)",
+          "4,110 (10.6%)",
+          "174 (16.9%)",
+          ""
+        ],
+        [
+          "Sex",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Male",
+          "18,155 (48.2%)",
+          "17,576 (48.1%)",
+          "579 (53.4%)",
+          ""
+        ],
+        [
+          "Female",
+          "19,361 (51.8%)",
+          "18,937 (51.9%)",
+          "424 (46.6%)",
+          ""
+        ],
+        [
+          "Race/ethnicity",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Mexican American",
+          "5,885 (8.5%)",
+          "5,809 (8.6%)",
+          "76 (3.9%)",
+          ""
+        ],
+        [
+          "Other Hispanic",
+          "3,578 (5.6%)",
+          "3,525 (5.6%)",
+          "53 (2.4%)",
+          ""
+        ],
+        [
+          "Non-Hispanic White",
+          "15,671 (66.8%)",
+          "15,050 (66.6%)",
+          "621 (78.4%)",
+          ""
+        ],
+        [
+          "Non-Hispanic Black",
+          "8,112 (11.3%)",
+          "7,890 (11.3%)",
+          "222 (12.1%)",
+          ""
+        ],
+        [
+          "Other race",
+          "4,270 (7.8%)",
+          "4,239 (7.9%)",
+          "31 (3.2%)",
+          ""
+        ],
+        [
+          "Education",
+          "missing 46",
+          "missing 41",
+          "missing 5",
+          ""
+        ],
+        [
+          "<High school",
+          "9,390 (16.2%)",
+          "9,016 (15.9%)",
+          "374 (29.5%)",
+          ""
+        ],
+        [
+          "High school/GED",
+          "8,582 (23.2%)",
+          "8,326 (23.1%)",
+          "256 (28.9%)",
+          ""
+        ],
+        [
+          ">High school",
+          "19,498 (60.6%)",
+          "19,130 (61.0%)",
+          "368 (41.6%)",
+          ""
+        ],
+        [
+          "Poverty-income ratio group",
+          "missing 3,370",
+          "missing 3,300",
+          "missing 70",
+          ""
+        ],
+        [
+          "<1.30",
+          "10,766 (21.3%)",
+          "10,433 (21.1%)",
+          "333 (29.1%)",
+          ""
+        ],
+        [
+          "1.30-3.49",
+          "12,951 (35.8%)",
+          "12,509 (35.6%)",
+          "442 (47.8%)",
+          ""
+        ],
+        [
+          ">=3.50",
+          "10,429 (42.9%)",
+          "10,271 (43.3%)",
+          "158 (23.1%)",
+          ""
+        ],
+        [
+          "BMI group",
+          "missing 527",
+          "missing 474",
+          "missing 53",
+          ""
+        ],
+        [
+          "<25",
+          "10,732 (30.0%)",
+          "10,477 (30.1%)",
+          "255 (26.7%)",
+          ""
+        ],
+        [
+          "25-29.9",
+          "12,235 (32.9%)",
+          "11,911 (32.9%)",
+          "324 (31.0%)",
+          ""
+        ],
+        [
+          ">=30",
+          "14,022 (37.1%)",
+          "13,651 (37.0%)",
+          "371 (42.3%)",
+          ""
+        ],
+        [
+          "Ever smoked 100 cigarettes",
+          "missing 25",
+          "missing 25",
+          "",
+          ""
+        ],
+        [
+          "Never smoker",
+          "20,857 (55.3%)",
+          "20,402 (55.5%)",
+          "455 (45.8%)",
+          ""
+        ],
+        [
+          "Ever smoker",
+          "16,634 (44.7%)",
+          "16,086 (44.5%)",
+          "548 (54.2%)",
+          ""
+        ],
+        [
+          "Marital status",
+          "missing 23",
+          "missing 23",
+          "",
+          ""
+        ],
+        [
+          "Married/partner",
+          "22,369 (63.4%)",
+          "21,902 (63.7%)",
+          "467 (49.3%)",
+          ""
+        ],
+        [
+          "Not married/partner",
+          "15,124 (36.6%)",
+          "14,588 (36.3%)",
+          "536 (50.7%)",
+          ""
+        ],
+        [
+          "Hypertension history",
+          "missing 3",
+          "missing 3",
+          "",
+          ""
+        ],
+        [
+          "No",
+          "21,682 (62.5%)",
+          "21,461 (63.3%)",
+          "221 (22.7%)",
+          ""
+        ],
+        [
+          "Yes",
+          "15,831 (37.5%)",
+          "15,049 (36.7%)",
+          "782 (77.3%)",
+          ""
+        ],
+        [
+          "Diabetes history",
+          "missing 688",
+          "missing 687",
+          "missing 1",
+          ""
+        ],
+        [
+          "No",
+          "29,857 (85.9%)",
+          "29,265 (86.4%)",
+          "592 (63.1%)",
+          ""
+        ],
+        [
+          "Yes",
+          "6,971 (14.1%)",
+          "6,561 (13.6%)",
+          "410 (36.9%)",
+          ""
+        ],
+        [
+          "Prevalent CVD",
+          "missing 156",
+          "missing 147",
+          "missing 9",
+          ""
+        ],
+        [
+          "No",
+          "34,169 (93.2%)",
+          "33,569 (93.8%)",
+          "600 (61.6%)",
+          ""
+        ],
+        [
+          "Yes",
+          "3,191 (6.8%)",
+          "2,797 (6.2%)",
+          "394 (38.4%)",
+          ""
+        ]
+      ],
+      "n_rows": 47,
+      "n_columns": 5
+    },
+    {
+      "block": 45,
+      "kind": "paragraph",
+      "paragraph": 44,
+      "style": "Normal",
+      "text": "Continuous variables are survey-weighted mean (SD); categorical variables are unweighted n (survey-weighted percentage). Percentages exclude missing observations for the relevant variable, and missing counts are shown in the category header or continuous-variable cell."
+    },
+    {
+      "block": 46,
+      "kind": "paragraph",
+      "paragraph": 45,
+      "style": "Heading 2",
+      "text": "Main Cox models"
+    },
+    {
+      "block": 47,
+      "kind": "paragraph",
+      "paragraph": 46,
+      "style": "Normal",
+      "text": "In the common complete-case sample (n=32,880; 875 heart disease deaths), sleep duration was associated with heart disease mortality in all prespecified Cox models (global Wald P<0.001 for Model 1, P=0.005 for Model 2, and P=0.033 for Model 3). Compared with 7–<8 h/night, participants reporting ≥9 h/night had higher heart disease mortality in Model 2 (HR 1.70, 95% CI 1.30–2.22). Additional adjustment for BMI, hypertension, diabetes, and prevalent CVD attenuated but did not eliminate the association (HR 1.53, 95% CI 1.18–1.99)."
+    },
+    {
+      "block": 48,
+      "kind": "paragraph",
+      "paragraph": 47,
+      "style": "Normal",
+      "text": "On the common SIRI-complete sample, adding one domain at a time to Model 2 attenuated the long-sleep log-HR by 9.3% for BMI, 7.0% for hypertension/diabetes, 11.5% for prevalent CVD, and 7.4% for log-SIRI; these percentages are non-additive. In the cumulative sequence, the HR changed from 1.71 to 1.63, 1.60, 1.54, and 1.50. Thus the incremental change when SIRI was added after CVD was 1.54→1.50, not the full cumulative 25.4% attenuation (Figure 3)."
+    },
+    {
+      "block": 49,
+      "kind": "paragraph",
+      "paragraph": 48,
+      "style": "Caption",
+      "text": "Table 2. Survey-weighted Cox models for sleep duration and heart disease mortality"
+    },
+    {
+      "block": 50,
+      "kind": "table",
+      "table": 2,
+      "rows": [
+        [
+          "Sleep duration",
+          "Model 1\nHR (95% CI)",
+          "Model 2\nHR (95% CI)",
+          "Model 3\nHR (95% CI)"
+        ],
+        [
+          "<6 h",
+          "1.61 (1.18–2.21)",
+          "1.41 (1.03–1.94)",
+          "1.21 (0.88–1.65)"
+        ],
+        [
+          "6–<7 h",
+          "1.44 (1.11–1.87)",
+          "1.35 (1.04–1.76)",
+          "1.29 (1.00–1.67)"
+        ],
+        [
+          "7–<8 h",
+          "Reference",
+          "Reference",
+          "Reference"
+        ],
+        [
+          "8–<9 h",
+          "1.25 (1.00–1.57)",
+          "1.22 (0.97–1.55)",
+          "1.19 (0.94–1.50)"
+        ],
+        [
+          "≥9 h",
+          "1.78 (1.36–2.32)",
+          "1.70 (1.30–2.22)",
+          "1.53 (1.18–1.99)"
+        ],
+        [
+          "Global P",
+          "<0.001",
+          "0.005",
+          "0.033"
+        ]
+      ],
+      "n_rows": 7,
+      "n_columns": 4
+    },
+    {
+      "block": 51,
+      "kind": "paragraph",
+      "paragraph": 49,
+      "style": "Normal",
+      "text": "All models used the same 32,880 participants and 875 heart disease deaths. Model 1 adjusted for age, sex, and race/ethnicity. Model 2 additionally adjusted for education, continuous PIR, marital status, and smoking. Model 3 additionally adjusted for continuous BMI, hypertension, diabetes, and prevalent CVD. Age, PIR, and BMI were modeled with restricted cubic splines. The reference was 7–<8 h/night; global P jointly tested the four nonreference categories."
+    },
+    {
+      "block": 52,
+      "kind": "paragraph",
+      "paragraph": 50,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 53,
+      "kind": "paragraph",
+      "paragraph": 51,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 54,
+      "kind": "paragraph",
+      "paragraph": 52,
+      "style": "Caption",
+      "text": "Figure 2. Survey-weighted restricted cubic splines for sleep duration and heart disease mortality in the full analytic cohort (Panel A) and among participants free of prevalent CVD at baseline (Panel B). Both panels use the main confounder model, 7 h/night as the reference, and knots at 5, 6, 7, 8, and 9 h/night. Shaded regions are 95% confidence intervals."
+    },
+    {
+      "block": 55,
+      "kind": "paragraph",
+      "paragraph": 53,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 56,
+      "kind": "paragraph",
+      "paragraph": 54,
+      "style": "Heading 2",
+      "text": "Sequential health-status attenuation"
+    },
+    {
+      "block": 57,
+      "kind": "paragraph",
+      "paragraph": 55,
+      "style": "Normal",
+      "text": "On the common SIRI-complete sample (n=31,367; 830 heart disease deaths), the Model 2 HR for ≥9 versus 7–<8 h/night was 1.71 (95% CI 1.31–2.25). Sequential addition of BMI, hypertension/diabetes, prevalent CVD, and log-SIRI shifted the HR estimates to 1.63, 1.60, 1.54, and 1.50, corresponding to cumulative, order-dependent reductions in the log-HR of 9.3%, 13.3%, 19.9%, and 25.4%, respectively (Figure 3B). When added individually, these domains produced smaller and non-equivalent changes (Figure 3A). These attenuation estimates are descriptive and may reflect confounding control, pathway adjustment, or hazard-ratio non-collapsibility; they should not be interpreted as mediated proportions."
+    },
+    {
+      "block": 58,
+      "kind": "paragraph",
+      "paragraph": 56,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 59,
+      "kind": "paragraph",
+      "paragraph": 57,
+      "style": "Caption",
+      "text": "Figure 3. One-at-a-time and cumulative health-status adjustment for ≥9 versus 7–<8 h/night. Panel A adds each domain separately to Model 2; Panel B shows the specified cumulative order. Percent attenuation is descriptive, order-dependent, non-additive, and not a mediated proportion."
+    },
+    {
+      "block": 60,
+      "kind": "paragraph",
+      "paragraph": 58,
+      "style": "Heading 2",
+      "text": "Reverse-causation, missing-data, and competing-risk analyses"
+    },
+    {
+      "block": 61,
+      "kind": "paragraph",
+      "paragraph": 59,
+      "style": "Normal",
+      "text": "Among participants free of prevalent CVD, the ≥9-h HR was 1.81 in Model 2 and 1.67 in Model 3. In the full-cycle landmark analyses, 2- and 5-year Model 2 HRs were 1.75 and 2.14; however, the comparison also changed cycle composition. Restricting the source to 2005–2014 cycles gave 0-, 2-, and 5-year Model 2 HRs of 1.92, 1.94, and 2.14, and Model 3 HRs of 1.73, 1.75, and 1.90. The ≥9-h time interaction was not significant in Model 2 (P=0.312) or Model 3 (P=0.321); global four-category interaction P values were 0.817 and 0.759. Multiple-imputation HRs were 1.74 and 1.59. The Fine–Gray weighted approximation remained supportive but secondary (Figure 4; Table 3)."
+    },
+    {
+      "block": 62,
+      "kind": "paragraph",
+      "paragraph": 60,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 63,
+      "kind": "paragraph",
+      "paragraph": 61,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 64,
+      "kind": "paragraph",
+      "paragraph": 62,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 65,
+      "kind": "paragraph",
+      "paragraph": 63,
+      "style": "Caption",
+      "text": "Figure 4. Robustness of the long-sleep association. Fine–Gray rows are weighted stratified-PSU sandwich approximations and are shown as secondary subdistribution-hazard sensitivity analyses; all other rows show cause-specific hazard ratios."
+    },
+    {
+      "block": 66,
+      "kind": "paragraph",
+      "paragraph": 64,
+      "style": "Caption",
+      "text": "Table 3. Robustness analyses for long sleep (≥9 versus 7–<8 h/night)"
+    },
+    {
+      "block": 67,
+      "kind": "table",
+      "table": 3,
+      "rows": [
+        [
+          "Analysis",
+          "Model 2",
+          "Model 3",
+          "N",
+          "Heart deaths",
+          "Measure"
+        ],
+        [
+          "Free of prevalent CVD",
+          "1.81 (1.28–2.57)",
+          "1.67 (1.19–2.36)",
+          "30096",
+          "531",
+          "HR"
+        ],
+        [
+          "Exclude first 2 years",
+          "1.75 (1.33–2.29)",
+          "1.57 (1.20–2.05)",
+          "30198",
+          "733",
+          "HR"
+        ],
+        [
+          "Exclude first 5 years",
+          "2.14 (1.62–2.82)",
+          "1.90 (1.44–2.51)",
+          "22610",
+          "446",
+          "HR"
+        ],
+        [
+          "Multiple imputation",
+          "1.74 (1.35–2.23)",
+          "1.59 (1.24–2.03)",
+          "37516",
+          "1003",
+          "HR"
+        ],
+        [
+          "Fine–Gray sensitivity*",
+          "1.53 (1.17–2.02)",
+          "1.39 (1.06–1.83)",
+          "32880",
+          "875",
+          "SHR"
+        ]
+      ],
+      "n_rows": 6,
+      "n_columns": 6
+    },
+    {
+      "block": 68,
+      "kind": "paragraph",
+      "paragraph": 65,
+      "style": "Normal",
+      "text": "Values are effect estimates (95% confidence intervals). Model 2 adjusts the designated baseline confounders; Model 3 additionally adjusts cardiometabolic and pre-existing disease status. HR denotes cause-specific hazard ratio and SHR subdistribution hazard ratio. The 5-year lag sample is smaller because later NHANES cycles cannot contribute participants without at least 5 years of follow-up."
+    },
+    {
+      "block": 69,
+      "kind": "paragraph",
+      "paragraph": 66,
+      "style": "Heading 2",
+      "text": "Regression-standardized absolute risks"
+    },
+    {
+      "block": 70,
+      "kind": "paragraph",
+      "paragraph": 67,
+      "style": "Normal",
+      "text": "In Model 2, the 10-year standardized cumulative incidence was 2.88% (95% PSU-bootstrap interval 2.47%–3.30%) for ≥9 h and 1.87% (1.58%–2.19%) for 7–<8 h. The risk difference was 1.01 percentage points (0.61–1.45) using 500 bootstrap replicates."
+    },
+    {
+      "block": 71,
+      "kind": "paragraph",
+      "paragraph": 68,
+      "style": "Caption",
+      "text": "Table 4. Regression-standardized cumulative incidence of heart-disease death"
+    },
+    {
+      "block": 72,
+      "kind": "table",
+      "table": 4,
+      "rows": [
+        [
+          "Sleep duration",
+          "5-year risk",
+          "10-year risk",
+          "10-year RD vs 7–<8 h, percentage points"
+        ],
+        [
+          "<6 h",
+          "1.08% (0.89–1.27)",
+          "2.39% (2.03–2.74)",
+          "0.52 (0.08–0.94)"
+        ],
+        [
+          "6–<7 h",
+          "1.06% (0.91–1.23)",
+          "2.43% (2.14–2.72)",
+          "0.56 (0.17–0.90)"
+        ],
+        [
+          "7–<8 h",
+          "0.80% (0.66–0.94)",
+          "1.87% (1.58–2.19)",
+          "Reference"
+        ],
+        [
+          "8–<9 h",
+          "0.96% (0.83–1.09)",
+          "2.19% (1.95–2.44)",
+          "0.32 (0.02–0.63)"
+        ],
+        [
+          "≥9 h",
+          "1.30% (1.11–1.48)",
+          "2.88% (2.47–3.30)",
+          "1.01 (0.61–1.45)"
+        ]
+      ],
+      "n_rows": 6,
+      "n_columns": 4
+    },
+    {
+      "block": 73,
+      "kind": "paragraph",
+      "paragraph": 69,
+      "style": "Normal",
+      "text": "Risks and risk differences are percentages with 95% percentile intervals from 500 stratified PSU bootstrap replicates. Regression standardization combined Model 2 cause-specific Cox models for heart-disease and other-cause death and retained competing deaths in cumulative incidence."
+    },
+    {
+      "block": 74,
+      "kind": "paragraph",
+      "paragraph": 70,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 75,
+      "kind": "paragraph",
+      "paragraph": 71,
+      "style": "Caption",
+      "text": "Figure 5. Model 2 regression-standardized cumulative incidence of heart-disease death in the presence of competing deaths. Shading shows 95% intervals from 500 stratified PSU bootstrap replicates. Curves are associational model-based contrasts, not intervention effects."
+    },
+    {
+      "block": 76,
+      "kind": "paragraph",
+      "paragraph": 72,
+      "style": "Heading 2",
+      "text": "Exploratory inflammatory pathway analyses"
+    },
+    {
+      "block": 77,
+      "kind": "paragraph",
+      "paragraph": 73,
+      "style": "Normal",
+      "text": "Sleep duration was associated with SIRI in categorical and spline models, but the magnitude was small; SII showed no overall spline association. On the same SIRI-complete sample, adding log-SIRI alone to Model 2 attenuated the long-sleep log-HR by 7.4%. In the cumulative sequence, the HR changed only from 1.54 before SIRI to 1.50 after SIRI. The full 25.4% reduction arose across BMI, hypertension/diabetes, CVD, and SIRI together and must not be attributed to inflammation."
+    },
+    {
+      "block": 78,
+      "kind": "paragraph",
+      "paragraph": 74,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 79,
+      "kind": "paragraph",
+      "paragraph": 75,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 80,
+      "kind": "paragraph",
+      "paragraph": 76,
+      "style": "Caption",
+      "text": "Figure 6. Survey-weighted restricted cubic splines relating sleep duration to SIRI (Panel A) and SII (Panel B). Values are ratios of adjusted geometric means relative to 7 h/night; shaded regions are 95% confidence intervals. Models adjust the designated baseline confounders. Concurrent measurement of sleep and inflammation precludes a strong causal-mediation interpretation."
+    },
+    {
+      "block": 81,
+      "kind": "paragraph",
+      "paragraph": 77,
+      "style": "Heading 1",
+      "text": "Discussion"
+    },
+    {
+      "block": 82,
+      "kind": "paragraph",
+      "paragraph": 78,
+      "style": "Normal",
+      "text": "This analysis supports a nonlinear association between sleep duration and heart disease mortality, with the most consistent elevation observed among adults reporting ≥9 h/night of sleep. The association was robust to alternative survey-design specifications, proportional hazards assessment, lagged analyses, missing-data approaches, competing-risk analyses, and regression-standardized risk estimation. Compared with 7–<8 h/night, long sleep was associated with an approximately one percentage-point higher 10-year standardized cumulative incidence of heart disease death. These findings indicate that long sleep duration identifies a population subgroup with elevated mortality risk, but they do not establish that extending sleep duration would increase or decrease mortality risk."
+    },
+    {
+      "block": 83,
+      "kind": "paragraph",
+      "paragraph": 79,
+      "style": "Normal",
+      "text": "The exposure–outcome pattern was nonlinear, with the lowest estimated hazard near 7 h/night. The association remained when alternative spline specifications were applied, reducing concern that the observed shape was driven solely by the prespecified clinical knot placement. The overall pattern is consistent with previous reports of U- or J-shaped associations between sleep duration and mortality; however, differences in outcome definitions, sleep assessment, and covariate structures complicate direct comparisons across studies. In particular, long sleep is difficult to interpret because it may reflect sleep disorders, depression, reduced physical activity, socioeconomic disadvantage, frailty, or undiagnosed disease rather than a direct adverse biological exposure."
+    },
+    {
+      "block": 84,
+      "kind": "paragraph",
+      "paragraph": 80,
+      "style": "Normal",
+      "text": "Reverse-causation analyses provided partial but not definitive reassurance. Exclusion of prevalent cardiovascular disease and lagged analyses did not materially eliminate the association, suggesting that recognized baseline cardiovascular disease alone does not fully explain the findings. However, longer lag analyses may alter the survivor population and calendar composition, and they cannot exclude occult disease, subclinical illness, or frailty. Therefore, persistence of the association after lagging should not be interpreted as proof of a delayed causal effect of long sleep."
+    },
+    {
+      "block": 85,
+      "kind": "paragraph",
+      "paragraph": 81,
+      "style": "Normal",
+      "text": "Adjustment for health-status variables attenuated the association between long sleep and heart disease mortality. This attenuation is compatible with several interpretations, including control of confounding, adjustment for intermediate pathways, or changes caused by hazard-ratio non-collapsibility. Because variables such as BMI, hypertension, diabetes, and prevalent cardiovascular disease may represent both markers of underlying health status and components of possible causal pathways, these analyses should not be interpreted as identifying a proportion mediated. The remaining association after health-status adjustment suggests that measured disease burden does not completely account for the observed relationship, while residual confounding remains plausible."
+    },
+    {
+      "block": 86,
+      "kind": "paragraph",
+      "paragraph": 82,
+      "style": "Normal",
+      "text": "Inflammatory marker analyses provided limited additional insight. SIRI showed a modest association with sleep duration, whereas SII showed no clear overall association. Adding SIRI to the health-status adjustment sequence produced only a small additional change in the long-sleep estimate. Because sleep duration and inflammatory markers were measured at the same examination, these analyses represent exploratory biomarker associations rather than causal mediation analyses. The results therefore do not support inflammation as a primary explanation for the association between long sleep and heart disease mortality."
+    },
+    {
+      "block": 87,
+      "kind": "paragraph",
+      "paragraph": 83,
+      "style": "Normal",
+      "text": "This study has several strengths. The analysis used a large nationally representative cohort with linked mortality follow-up and incorporated NHANES sampling weights, design-based variance estimation, common-sample model comparisons, spline analyses, multiple imputation, competing-risk standardization, and quantitative bias assessment. The prespecified estimand framework also helped distinguish observational associations from intervention effects and avoided interpreting health-status adjustment as a causal mediation analysis."
+    },
+    {
+      "block": 88,
+      "kind": "paragraph",
+      "paragraph": 84,
+      "style": "Normal",
+      "text": "Several limitations remain. Sleep duration was self-reported and measured at a single baseline examination; therefore, measurement error, changes in sleep patterns over time, and misclassification of long sleep are possible. Important potential confounders, including sleep quality, obstructive sleep apnea, depression, physical activity, occupational factors, and frailty, were incompletely measured or unavailable across NHANES cycles. Quantitative bias analyses can illustrate the strength of unmeasured confounding required to explain the association but cannot eliminate such bias. Landmark analyses may introduce selection due to conditioning on survival, and standardized risks depend on modeling assumptions. Finally, these findings apply to the US noninstitutionalized population and should not be interpreted as evidence that changing sleep duration would alter mortality risk."
+    },
+    {
+      "block": 89,
+      "kind": "paragraph",
+      "paragraph": 85,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 90,
+      "kind": "paragraph",
+      "paragraph": 86,
+      "style": "Heading 1",
+      "text": "Conclusion"
+    },
+    {
+      "block": 91,
+      "kind": "paragraph",
+      "paragraph": 87,
+      "style": "Normal",
+      "text": "In NHANES 2005–2018, reporting ≥9 h/night of sleep was consistently associated with higher heart disease mortality across survey-weighted models and multiple sensitivity analyses. The association corresponded to an approximately one percentage-point higher 10-year standardized cumulative incidence compared with 7–<8 h/night. Attenuation after adjustment for health-status variables, limited additional contribution from inflammatory markers, and quantitative bias analyses support interpreting long sleep as a marker of elevated underlying health risk rather than evidence of a causal effect of sleep duration on mortality. Further studies with repeated objective sleep measurements and improved assessment of sleep disorders, frailty, and other health-related factors are needed to clarify the mechanisms underlying this association."
+    },
+    {
+      "block": 92,
+      "kind": "paragraph",
+      "paragraph": 88,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 93,
+      "kind": "paragraph",
+      "paragraph": 89,
+      "style": "Heading 1",
+      "text": "Ethics statement"
+    },
+    {
+      "block": 94,
+      "kind": "paragraph",
+      "paragraph": 90,
+      "style": "Normal",
+      "text": "NHANES protocols were approved by the NCHS Research Ethics Review Board, and all participants provided written informed consent. This secondary analysis used publicly available, de-identified data."
+    },
+    {
+      "block": 95,
+      "kind": "paragraph",
+      "paragraph": 91,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 96,
+      "kind": "paragraph",
+      "paragraph": 92,
+      "style": "Heading 1",
+      "text": "Author contributions"
+    },
+    {
+      "block": 97,
+      "kind": "paragraph",
+      "paragraph": 93,
+      "style": "Normal",
+      "text": "JC conceived and designed the study, performed the statistical analyses, interpreted the data, drafted the manuscript, critically revised the manuscript, and approved the final version."
+    },
+    {
+      "block": 98,
+      "kind": "paragraph",
+      "paragraph": 94,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 99,
+      "kind": "paragraph",
+      "paragraph": 95,
+      "style": "Heading 1",
+      "text": "Funding"
+    },
+    {
+      "block": 100,
+      "kind": "paragraph",
+      "paragraph": 96,
+      "style": "Normal",
+      "text": "The author received no financial support for the research, authorship, or publication of this article."
+    },
+    {
+      "block": 101,
+      "kind": "paragraph",
+      "paragraph": 97,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 102,
+      "kind": "paragraph",
+      "paragraph": 98,
+      "style": "Heading 1",
+      "text": "Conflict of interest"
+    },
+    {
+      "block": 103,
+      "kind": "paragraph",
+      "paragraph": 99,
+      "style": "Normal",
+      "text": "The author declares no commercial or financial relationships that could be construed as a potential conflict of interest."
+    },
+    {
+      "block": 104,
+      "kind": "paragraph",
+      "paragraph": 100,
+      "style": "Heading 1",
+      "text": "Data availability statement"
+    },
+    {
+      "block": 105,
+      "kind": "paragraph",
+      "paragraph": 101,
+      "style": "Normal",
+      "text": "Original NHANES component and linked mortality data are available from the National Center for Health Statistics."
+    },
+    {
+      "block": 106,
+      "kind": "paragraph",
+      "paragraph": 102,
+      "style": "Heading 1",
+      "text": "References"
+    },
+    {
+      "block": 107,
+      "kind": "paragraph",
+      "paragraph": 103,
+      "style": "Normal",
+      "text": "1. Lloyd-Jones DM, Allen NB, Anderson CAM, Black T, Brewer LC, Foraker RE, Grandner MA, Lavretsky H, Perak AM, Sharma G, Rosamond W: Life's Essential 8: Updating and Enhancing the American Heart Association's Construct of Cardiovascular Health: A Presidential Advisory From the American Heart Association. Circulation 2022, 146(5):e18–e43. doi:10.1161/CIR.0000000000001078."
+    },
+    {
+      "block": 108,
+      "kind": "paragraph",
+      "paragraph": 104,
+      "style": "Normal",
+      "text": "2. Jaspan VN, Greenberg GS, Parihar S, Park CM, Somers VK, Shapiro MD, Lavie CJ, Virani SS, Slipczuk L: The Role of Sleep in Cardiovascular Disease. Curr Atheroscler Rep 2024, 26(7):249–262. doi:10.1007/s11883-024-01207-5."
+    },
+    {
+      "block": 109,
+      "kind": "paragraph",
+      "paragraph": 105,
+      "style": "Normal",
+      "text": "3. Korostovtseva L, Bochkarev M, Sviryaev Y: Sleep and Cardiovascular Risk. Sleep Med Clin 2021, 16(3):485–497. doi:10.1016/j.jsmc.2021.05.001."
+    },
+    {
+      "block": 110,
+      "kind": "paragraph",
+      "paragraph": 106,
+      "style": "Normal",
+      "text": "4. Watson NF, Badr MS, Belenky G, Bliwise DL, Buxton OM, Buysse D, Dinges DF, Gangwisch J, Grandner MA, Kushida C, Malhotra RK, Martin JL, Patel SR, Quan SF, Tasali E: Recommended Amount of Sleep for a Healthy Adult: A Joint Consensus Statement of the American Academy of Sleep Medicine and Sleep Research Society. Sleep 2015, 38(6):843–844. doi:10.5665/sleep.4716."
+    },
+    {
+      "block": 111,
+      "kind": "paragraph",
+      "paragraph": 107,
+      "style": "Normal",
+      "text": "5. Kwok CS, Kontopantelis E, Kuligowski G, Gray M, Muhyaldeen A, Gale CP, Peat GM, Cleator J, Chew-Graham C, Loke YK, Mamas AM: Self-Reported Sleep Duration and Quality and Cardiovascular Disease and Mortality: A Dose-Response Meta-Analysis. J Am Heart Assoc 2018, 7(15):e008552. doi:10.1161/JAHA.118.008552."
+    },
+    {
+      "block": 112,
+      "kind": "paragraph",
+      "paragraph": 108,
+      "style": "Normal",
+      "text": "6. Yin J, Jin X, Shan Z, Li S, Huang H, Li P, Peng X, Peng Z, Yu K, Bao W, Yang W, Chen X, Liu L: Relationship of Sleep Duration With All-Cause Mortality and Cardiovascular Events: A Systematic Review and Dose-Response Meta-Analysis of Prospective Cohort Studies. J Am Heart Assoc 2017, 6(9):e005947. doi:10.1161/JAHA.117.005947."
+    },
+    {
+      "block": 113,
+      "kind": "paragraph",
+      "paragraph": 109,
+      "style": "Normal",
+      "text": "7. Jin Q, Yang N, Dai J, Zhao Y, Zhang X, Yin J, Yan Y: Association of Sleep Duration With All-Cause and Cardiovascular Mortality: A Prospective Cohort Study. Front Public Health 2022, 10:880276. doi:10.3389/fpubh.2022.880276."
+    },
+    {
+      "block": 114,
+      "kind": "paragraph",
+      "paragraph": 110,
+      "style": "Normal",
+      "text": "8. Patel SR, Malhotra A, Gottlieb DJ, White DP, Hu FB: Correlates of Long Sleep Duration. Sleep 2006, 29(7):881–889. doi:10.1093/sleep/29.7.881."
+    },
+    {
+      "block": 115,
+      "kind": "paragraph",
+      "paragraph": 111,
+      "style": "Normal",
+      "text": "9. Spiesshoefer J, Linz D, Skobel E, Arzt M, Stadler S, Schoebel C, Fietze I, Penzel T, Sinha AM, Fox H, Oldenburg O: Sleep - the yet underappreciated player in cardiovascular diseases: A clinical review from the German Cardiac Society Working Group on Sleep Disordered Breathing. Eur J Prev Cardiol 2021, 28(2):189–200. doi:10.1177/2047487319879526."
+    },
+    {
+      "block": 116,
+      "kind": "paragraph",
+      "paragraph": 112,
+      "style": "Normal",
+      "text": "10. Mullington JM, Simpson NS, Meier-Ewert HK, Haack M: Sleep loss and inflammation. Best Pract Res Clin Endocrinol Metab 2010, 24(5):775–784. doi:10.1016/j.beem.2010.08.014."
+    },
+    {
+      "block": 117,
+      "kind": "paragraph",
+      "paragraph": 113,
+      "style": "Normal",
+      "text": "11. Yeghiazarians Y, Jneid H, Tietjens JR, Redline S, Brown DL, El-Sherif N, Mehra R, Bozkurt B, Ndumele CE, Somers VK: Obstructive Sleep Apnea and Cardiovascular Disease: A Scientific Statement From the American Heart Association. Circulation 2021, 144(3):e56–e67. doi:10.1161/CIR.0000000000000988."
+    },
+    {
+      "block": 118,
+      "kind": "paragraph",
+      "paragraph": 114,
+      "style": "Normal",
+      "text": "12. Floras JS: Sleep apnea and cardiovascular risk. J Cardiol 2014, 63(1):3–8. doi:10.1016/j.jjcc.2013.08.009."
+    },
+    {
+      "block": 119,
+      "kind": "paragraph",
+      "paragraph": 115,
+      "style": "Normal",
+      "text": "13. Caples SM, Garcia-Touchard A, Somers VK: Sleep-disordered breathing and cardiovascular risk. Sleep 2007, 30(3):291–304. doi:10.1093/sleep/30.3.291."
+    },
+    {
+      "block": 120,
+      "kind": "paragraph",
+      "paragraph": 116,
+      "style": "Normal",
+      "text": "14. Li Y, Miao Y, Zhang Q: Causal associations of obstructive sleep apnea with cardiovascular disease: a Mendelian randomization study. Sleep 2023, 46(3):zsac298. doi:10.1093/sleep/zsac298."
+    },
+    {
+      "block": 121,
+      "kind": "paragraph",
+      "paragraph": 117,
+      "style": "Normal",
+      "text": "15. National Center for Health Statistics: NHANES Survey Methods and Analytic Guidelines. Centers for Disease Control and Prevention. https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx (accessed 10 August 2026)."
+    },
+    {
+      "block": 122,
+      "kind": "paragraph",
+      "paragraph": 118,
+      "style": "Normal",
+      "text": "16. VanderWeele TJ: Causal mediation analysis with survival data. Epidemiology 2011, 22(4):582–585. doi:10.1097/EDE.0b013e31821db37e."
+    },
+    {
+      "block": 123,
+      "kind": "paragraph",
+      "paragraph": 119,
+      "style": "Normal",
+      "text": "17. Schuler MS, Coffman DL, Stuart EA, Nguyen TQ, Vegetabile B, McCaffrey DF: Practical challenges in mediation analysis: a guide for applied researchers. Health Serv Outcomes Res Methodol 2025, 25(1):57–84. doi:10.1007/s10742-024-00327-4."
+    },
+    {
+      "block": 124,
+      "kind": "paragraph",
+      "paragraph": 120,
+      "style": "Normal",
+      "text": "18. Georgeson AR, Alvarez-Bartolo D, MacKinnon DP: A sensitivity analysis for temporal bias in cross-sectional mediation. Psychol Methods 2025, 30(6):1326–1344. doi:10.1037/met0000628."
+    },
+    {
+      "block": 125,
+      "kind": "paragraph",
+      "paragraph": 121,
+      "style": "Normal",
+      "text": "19. Fine JP, Gray RJ: A proportional hazards model for the subdistribution of a competing risk. J Am Stat Assoc 1999, 94(446):496–509. doi:10.1080/01621459.1999.10474144."
+    },
+    {
+      "block": 126,
+      "kind": "paragraph",
+      "paragraph": 122,
+      "style": "Normal",
+      "text": "20. Hernán MA, Sauer BC, Hernández-Díaz S, Platt R, Shrier I: Specifying a target trial prevents immortal time bias and other self-inflicted injuries in observational analyses. J Clin Epidemiol 2016, 79:70–75. doi:10.1016/j.jclinepi.2016.04.014."
+    },
+    {
+      "block": 127,
+      "kind": "paragraph",
+      "paragraph": 123,
+      "style": "Normal",
+      "text": "21. White IR, Royston P, Wood AM: Multiple imputation using chained equations: issues and guidance for practice. Stat Med 2011, 30(4):377–399. doi:10.1002/sim.4067."
+    },
+    {
+      "block": 128,
+      "kind": "paragraph",
+      "paragraph": 124,
+      "style": "Normal",
+      "text": "22. Syriopoulou E, Mozumder SI, Rutherford MJ, Lambert PC: Estimating causal effects in the presence of competing events using regression standardisation with the Stata command standsurv. BMC Med Res Methodol 2022, 22:226. doi:10.1186/s12874-022-01666-x."
+    },
+    {
+      "block": 129,
+      "kind": "paragraph",
+      "paragraph": 125,
+      "style": "Normal",
+      "text": "23. VanderWeele TJ, Ding P: Sensitivity analysis in observational research: introducing the E-value. Ann Intern Med 2017, 167(4):268–274. doi:10.7326/M16-2607."
+    },
+    {
+      "block": 130,
+      "kind": "paragraph",
+      "paragraph": 126,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 131,
+      "kind": "paragraph",
+      "paragraph": 127,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 132,
+      "kind": "paragraph",
+      "paragraph": 128,
+      "style": "Normal",
+      "text": ""
+    }
+  ],
+  "paragraphs": [
+    {
+      "block": 1,
+      "kind": "paragraph",
+      "paragraph": 1,
+      "style": "Title",
+      "text": "Association between sleep duration and heart disease mortality among US adults: an NHANES 2005–2018 linked mortality analysis"
+    },
+    {
+      "block": 2,
+      "kind": "paragraph",
+      "paragraph": 2,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 3,
+      "kind": "paragraph",
+      "paragraph": 3,
+      "style": "Normal",
+      "text": "Author: Jiayi Chen"
+    },
+    {
+      "block": 4,
+      "kind": "paragraph",
+      "paragraph": 4,
+      "style": "Normal",
+      "text": "Affiliation: Department of AI and Big Data, GENERTEC Health Management Technology Co., Ltd., Beijing, China"
+    },
+    {
+      "block": 5,
+      "kind": "paragraph",
+      "paragraph": 5,
+      "style": "Normal",
+      "text": "Corresponding author: Jiayi Chen, jiayichen0919@gmail.com"
+    },
+    {
+      "block": 6,
+      "kind": "paragraph",
+      "paragraph": 6,
+      "style": "Normal",
+      "text": "Article type: Research Article"
+    },
+    {
+      "block": 7,
+      "kind": "paragraph",
+      "paragraph": 7,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 8,
+      "kind": "paragraph",
+      "paragraph": 8,
+      "style": "Heading 1",
+      "text": "Abstract"
+    },
+    {
+      "block": 9,
+      "kind": "paragraph",
+      "paragraph": 9,
+      "style": "Normal",
+      "text": "Background: Long sleep duration has been associated with higher cardiovascular mortality, but whether this association reflects a harmful effect of sleep itself or underlying health conditions remains uncertain. We aimed to characterize the association between sleep duration and heart disease mortality using a prespecified causal framework that distinguishes baseline confounding from health-status-related attenuation and evaluates the robustness of relative and absolute risk estimates."
+    },
+    {
+      "block": 10,
+      "kind": "paragraph",
+      "paragraph": 10,
+      "style": "Normal",
+      "text": "Methods: We analyzed adults aged ≥20 years from NHANES 2005–2018 linked mortality data. Sleep duration was categorized as <6, 6–<7, 7–<8, 8–<9, and ≥9 h/night, with 7–<8 h/night as the reference. Survey-weighted cause-specific Cox models estimated associations with heart disease mortality using NHANES design-based variance estimation. We examined nonlinear associations, proportional hazards, reverse-causation using lagged analyses, missing-data sensitivity using multiple imputation, competing risks, and regression-standardized absolute risks with uncertainty estimated from 500 stratified PSU bootstrap replicates."
+    },
+    {
+      "block": 11,
+      "kind": "paragraph",
+      "paragraph": 11,
+      "style": "Normal",
+      "text": "Results: Among 37,516 adults followed for mortality, 1,003 heart-disease deaths occurred. Compared with 7–<8 h/night, reporting ≥9 h/night was associated with higher heart-disease mortality in the primary survey-weighted Cox model (HR 1.70, 95% CI 1.30–2.22) and remained elevated after adjustment for health-status variables (HR 1.53, 95% CI 1.18–1.99). The association was consistent across spline analyses, lagged analyses, missing-data sensitivity analyses, and competing-risk approaches. In regression-standardized analyses, the estimated 10-year cumulative incidence was 2.88% for ≥9 h/night versus 1.87% for 7–<8 h/night (risk difference 1.01 percentage points, 95% bootstrap interval 0.61–1.45)."
+    },
+    {
+      "block": 12,
+      "kind": "paragraph",
+      "paragraph": 12,
+      "style": "Normal",
+      "text": "Conclusions: Long sleep duration was consistently associated with higher heart-disease mortality across survey-weighted models and sensitivity analyses. The attenuation after adjustment for health-status variables, persistence in lagged analyses, and quantitative bias analyses support interpreting ≥9 h/night as a marker of underlying health risk rather than evidence that extending sleep duration would reduce or increase mortality risk."
+    },
+    {
+      "block": 13,
+      "kind": "paragraph",
+      "paragraph": 13,
+      "style": "Normal",
+      "text": "Keywords: sleep duration; heart disease mortality; NHANES; mortality risk; observational cohort study"
+    },
+    {
+      "block": 14,
+      "kind": "paragraph",
+      "paragraph": 14,
+      "style": "Heading 1",
+      "text": "Introduction"
+    },
+    {
+      "block": 15,
+      "kind": "paragraph",
+      "paragraph": 15,
+      "style": "Normal",
+      "text": "Sleep is now regarded as part of cardiovascular health rather than merely a symptom or lifestyle correlate. Duration, timing, regularity, quality, and sleep-disordered breathing may influence autonomic activity, metabolism, inflammation, coagulation, and endothelial function [1-3]. Current consensus recommendations generally support at least 7 h of sleep for healthy adults [4], but observational studies often describe higher cardiovascular risk at both short and long durations [5, 6]."
+    },
+    {
+      "block": 16,
+      "kind": "paragraph",
+      "paragraph": 16,
+      "style": "Normal",
+      "text": "The shape of this association remains unsettled. Results differ with the study population, outcome definition, sleep measurement, reference group, and degree of covariate control. A previous NHANES analysis reported a U-shaped relation between sleep duration and all-cause or broadly defined cardiovascular mortality, with the lowest risk around 7 h [7]. Heart disease mortality, however, is a more specific endpoint than composite cardiovascular mortality and may show a different pattern."
+    },
+    {
+      "block": 17,
+      "kind": "paragraph",
+      "paragraph": 17,
+      "style": "Normal",
+      "text": "Long sleep is especially difficult to interpret because it may reflect poor sleep quality, depression, low physical activity, socioeconomic disadvantage, sleep-disordered breathing, frailty, or occult disease rather than a direct harmful exposure [8, 9, 11–14]. Short sleep has stronger experimental links to sympathetic and inflammatory activation [10], creating a mismatch between the best-established mechanism and the strongest epidemiologic signal. We therefore prioritized an explicit estimand, longer reverse-causation lags, survey-cycle influence checks, quantitative bias analysis, and absolute risks rather than adding prediction models."
+    },
+    {
+      "block": 18,
+      "kind": "paragraph",
+      "paragraph": 18,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 19,
+      "kind": "paragraph",
+      "paragraph": 19,
+      "style": "Heading 1",
+      "text": "Materials and methods"
+    },
+    {
+      "block": 20,
+      "kind": "paragraph",
+      "paragraph": 20,
+      "style": "Heading 2",
+      "text": "Study design and population"
+    },
+    {
+      "block": 21,
+      "kind": "paragraph",
+      "paragraph": 21,
+      "style": "Normal",
+      "text": "This observational cohort study combined seven NHANES cycles from 2005–2006 through 2017–2018 and linked participants to public-use mortality follow-up. NHANES uses a multistage probability design to represent the noninstitutionalized US population [15]. Adults with eligible mortality follow-up and sleep duration from 3 to 11 h/night formed the analytic cohort (n=37,516). SIRI and SII were not required for cohort entry because they were exploratory rather than primary adjustment variables."
+    },
+    {
+      "block": 22,
+      "kind": "paragraph",
+      "paragraph": 22,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 23,
+      "kind": "paragraph",
+      "paragraph": 23,
+      "style": "Caption",
+      "text": "Figure 1. Causal structures guiding model interpretation. Panel A shows the etiologic pathway of interest; Panel B shows an alternative in which underlying poor health causes both longer sleep and mortality. Solid arrows indicate assumed causal relations and dashed arrows mark temporally uncertain pathways. SIRI and SII were measured at the same baseline visit as sleep duration; therefore, pathway analyses are exploratory rather than causal mediation estimates [16–18]."
+    },
+    {
+      "block": 24,
+      "kind": "paragraph",
+      "paragraph": 24,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 25,
+      "kind": "paragraph",
+      "paragraph": 25,
+      "style": "Heading 2",
+      "text": "Exposure and outcome"
+    },
+    {
+      "block": 26,
+      "kind": "paragraph",
+      "paragraph": 26,
+      "style": "Normal",
+      "text": "Usual sleep duration was self-reported in hours per night and harmonized across cycles. It was analyzed in five clinically interpretable categories: <6, 6–<7, 7–<8, 8–<9, and ≥9 h/night, with 7–<8 h/night as the reference, and continuously with restricted cubic splines. The primary outcome was heart disease mortality, defined as MORTSTAT=1 and UCOD_LEADING=1. Other-cause deaths were censored in cause-specific Cox models and treated as competing events in Fine–Gray models [19]."
+    },
+    {
+      "block": 27,
+      "kind": "paragraph",
+      "paragraph": 27,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 28,
+      "kind": "paragraph",
+      "paragraph": 28,
+      "style": "Heading 2",
+      "text": "Covariates"
+    },
+    {
+      "block": 29,
+      "kind": "paragraph",
+      "paragraph": 29,
+      "style": "Normal",
+      "text": "Potential variable roles were assigned according to the conceptual framework shown in Figure 1. Age, sex, race/ethnicity, education, continuous poverty-income ratio (PIR), marital status, and smoking were treated as baseline confounders. BMI, hypertension, diabetes, and prevalent CVD were treated as health-status variables that may represent pre-existing disease, partial pathways, or both, and were examined in secondary adjustment models rather than the primary confounder model. Prevalent CVD was defined as a positive report of any heart failure, coronary heart disease, angina, or myocardial infarction; participants were classified as negative only when all four conditions were explicitly absent. SIRI was evaluated as an exploratory inflammatory correlate, with SII examined in sensitivity analyses. Sleep quality, sleep apnea, depression, physical activity, and frailty were incompletely measured or unavailable across cycles and therefore remained potential sources of residual confounding."
+    },
+    {
+      "block": 30,
+      "kind": "paragraph",
+      "paragraph": 30,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 31,
+      "kind": "paragraph",
+      "paragraph": 31,
+      "style": "Heading 2",
+      "text": "Analytic framework and model definitions"
+    },
+    {
+      "block": 32,
+      "kind": "paragraph",
+      "paragraph": 32,
+      "style": "Normal",
+      "text": "Model 1 adjusted for age, sex, and race/ethnicity as a demographic model. Model 2 was the primary confounder model and additionally adjusted for education, continuous PIR, marital status, and smoking. Model 3 was a health-status sensitivity model that additionally adjusted for continuous BMI, hypertension, diabetes, and prevalent CVD. These variables were not interpreted as a fully adjusted causal model because they may represent pre-existing disease, partial pathways, or markers of underlying health status. Age, PIR, and BMI were modeled using four-knot restricted cubic splines at survey-weighted 5th, 35th, 65th, and 95th percentiles. Sensitivity analyses examined attenuation after adding BMI, hypertension/diabetes, prevalent CVD, and log-SIRI separately to Model 2 using a common analytic sample."
+    },
+    {
+      "block": 33,
+      "kind": "paragraph",
+      "paragraph": 33,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 34,
+      "kind": "paragraph",
+      "paragraph": 34,
+      "style": "Heading 2",
+      "text": "Estimand framework and alignment of eligibility and time zero"
+    },
+    {
+      "block": 35,
+      "kind": "paragraph",
+      "paragraph": 35,
+      "style": "Normal",
+      "text": "Eligibility, exposure classification, and time zero were aligned at the NHANES examination [20]. The primary contrast was habitual sleep duration ≥9 versus 7–<8 h/night, followed from baseline to heart-disease death, competing death, or administrative censoring. The primary estimand was an observational survey-adjusted cause-specific hazard association under Model 2; the secondary risk-scale estimand was the regression-standardized 5- and 10-year cumulative incidence of heart-disease death accounting for competing deaths. These estimands describe associations rather than intervention effects: sleep duration was not randomized, a well-defined intervention corresponding to habitual sleep categories was not specified, and exchangeability cannot be guaranteed from the observed data."
+    },
+    {
+      "block": 36,
+      "kind": "paragraph",
+      "paragraph": 36,
+      "style": "Heading 2",
+      "text": "Statistical analysis"
+    },
+    {
+      "block": 37,
+      "kind": "paragraph",
+      "paragraph": 37,
+      "style": "Normal",
+      "text": "Baseline characteristics were summarized with the 14-year MEC weight (WTMEC2YR/7) without null-hypothesis tests [15]. Cause-specific Cox models incorporated NHANES sampling weights and design-based variance estimation using strata and PSUs. Survey design variables were audited after cycle pooling, including assessment of cross-cycle stratum and PSU uniqueness. Models 1–3 were compared using the same complete-case analytic sample. Sleep duration was modeled categorically and continuously using restricted cubic splines with prespecified knots at 5, 6, 7, 8, and 9 h/night; alternative percentile-based knots were examined in sensitivity analyses. Proportional hazards assumptions were evaluated using sleep-category × log(time) interactions."
+    },
+    {
+      "block": 38,
+      "kind": "paragraph",
+      "paragraph": 38,
+      "style": "Normal",
+      "text": "Potential reverse causation was explored by excluding prevalent CVD and using 2- and 5-year landmark analyses, including analyses restricted to comparable NHANES cycle composition. Missing covariates were addressed using 20 multiple imputations by chained equations incorporating exposure, outcomes, follow-up, survey design variables, and covariates [21]. Competing risks were evaluated using weighted Fine–Gray sensitivity analyses [19]. Regression-standardized cumulative incidence was estimated from cause-specific hazard models with uncertainty obtained from 500 stratified PSU bootstrap replicates [22]. Sensitivity to unmeasured confounding was examined using E-values and continuous bias contours [23]."
+    },
+    {
+      "block": 39,
+      "kind": "paragraph",
+      "paragraph": 39,
+      "style": "Heading 1",
+      "text": "Results"
+    },
+    {
+      "block": 40,
+      "kind": "paragraph",
+      "paragraph": 40,
+      "style": "Heading 2",
+      "text": "Study population"
+    },
+    {
+      "block": 41,
+      "kind": "paragraph",
+      "paragraph": 41,
+      "style": "Normal",
+      "text": "The analytic cohort included 37,516 adults with eligible NHANES mortality linkage and available sleep-duration data. During follow-up, 1,003 participants experienced heart disease mortality. The primary Cox analyses were conducted in a common complete-case sample of 32,880 participants, including 875 heart disease deaths and 2,629 deaths from other causes, contributing 248,924 person-years of follow-up. Median follow-up estimated using the reverse Kaplan–Meier method was 7.92 years (IQR, 4.42–11.33), and the weighted crude heart disease mortality rate was 2.39 per 1,000 person-years. Restricting analyses to participants free of prevalent CVD at baseline yielded 30,096 complete cases and 531 heart disease deaths."
+    },
+    {
+      "block": 42,
+      "kind": "paragraph",
+      "paragraph": 42,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 43,
+      "kind": "paragraph",
+      "paragraph": 43,
+      "style": "Caption",
+      "text": "Table 1. Baseline characteristics by heart disease mortality status"
+    },
+    {
+      "block": 45,
+      "kind": "paragraph",
+      "paragraph": 44,
+      "style": "Normal",
+      "text": "Continuous variables are survey-weighted mean (SD); categorical variables are unweighted n (survey-weighted percentage). Percentages exclude missing observations for the relevant variable, and missing counts are shown in the category header or continuous-variable cell."
+    },
+    {
+      "block": 46,
+      "kind": "paragraph",
+      "paragraph": 45,
+      "style": "Heading 2",
+      "text": "Main Cox models"
+    },
+    {
+      "block": 47,
+      "kind": "paragraph",
+      "paragraph": 46,
+      "style": "Normal",
+      "text": "In the common complete-case sample (n=32,880; 875 heart disease deaths), sleep duration was associated with heart disease mortality in all prespecified Cox models (global Wald P<0.001 for Model 1, P=0.005 for Model 2, and P=0.033 for Model 3). Compared with 7–<8 h/night, participants reporting ≥9 h/night had higher heart disease mortality in Model 2 (HR 1.70, 95% CI 1.30–2.22). Additional adjustment for BMI, hypertension, diabetes, and prevalent CVD attenuated but did not eliminate the association (HR 1.53, 95% CI 1.18–1.99)."
+    },
+    {
+      "block": 48,
+      "kind": "paragraph",
+      "paragraph": 47,
+      "style": "Normal",
+      "text": "On the common SIRI-complete sample, adding one domain at a time to Model 2 attenuated the long-sleep log-HR by 9.3% for BMI, 7.0% for hypertension/diabetes, 11.5% for prevalent CVD, and 7.4% for log-SIRI; these percentages are non-additive. In the cumulative sequence, the HR changed from 1.71 to 1.63, 1.60, 1.54, and 1.50. Thus the incremental change when SIRI was added after CVD was 1.54→1.50, not the full cumulative 25.4% attenuation (Figure 3)."
+    },
+    {
+      "block": 49,
+      "kind": "paragraph",
+      "paragraph": 48,
+      "style": "Caption",
+      "text": "Table 2. Survey-weighted Cox models for sleep duration and heart disease mortality"
+    },
+    {
+      "block": 51,
+      "kind": "paragraph",
+      "paragraph": 49,
+      "style": "Normal",
+      "text": "All models used the same 32,880 participants and 875 heart disease deaths. Model 1 adjusted for age, sex, and race/ethnicity. Model 2 additionally adjusted for education, continuous PIR, marital status, and smoking. Model 3 additionally adjusted for continuous BMI, hypertension, diabetes, and prevalent CVD. Age, PIR, and BMI were modeled with restricted cubic splines. The reference was 7–<8 h/night; global P jointly tested the four nonreference categories."
+    },
+    {
+      "block": 52,
+      "kind": "paragraph",
+      "paragraph": 50,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 53,
+      "kind": "paragraph",
+      "paragraph": 51,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 54,
+      "kind": "paragraph",
+      "paragraph": 52,
+      "style": "Caption",
+      "text": "Figure 2. Survey-weighted restricted cubic splines for sleep duration and heart disease mortality in the full analytic cohort (Panel A) and among participants free of prevalent CVD at baseline (Panel B). Both panels use the main confounder model, 7 h/night as the reference, and knots at 5, 6, 7, 8, and 9 h/night. Shaded regions are 95% confidence intervals."
+    },
+    {
+      "block": 55,
+      "kind": "paragraph",
+      "paragraph": 53,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 56,
+      "kind": "paragraph",
+      "paragraph": 54,
+      "style": "Heading 2",
+      "text": "Sequential health-status attenuation"
+    },
+    {
+      "block": 57,
+      "kind": "paragraph",
+      "paragraph": 55,
+      "style": "Normal",
+      "text": "On the common SIRI-complete sample (n=31,367; 830 heart disease deaths), the Model 2 HR for ≥9 versus 7–<8 h/night was 1.71 (95% CI 1.31–2.25). Sequential addition of BMI, hypertension/diabetes, prevalent CVD, and log-SIRI shifted the HR estimates to 1.63, 1.60, 1.54, and 1.50, corresponding to cumulative, order-dependent reductions in the log-HR of 9.3%, 13.3%, 19.9%, and 25.4%, respectively (Figure 3B). When added individually, these domains produced smaller and non-equivalent changes (Figure 3A). These attenuation estimates are descriptive and may reflect confounding control, pathway adjustment, or hazard-ratio non-collapsibility; they should not be interpreted as mediated proportions."
+    },
+    {
+      "block": 58,
+      "kind": "paragraph",
+      "paragraph": 56,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 59,
+      "kind": "paragraph",
+      "paragraph": 57,
+      "style": "Caption",
+      "text": "Figure 3. One-at-a-time and cumulative health-status adjustment for ≥9 versus 7–<8 h/night. Panel A adds each domain separately to Model 2; Panel B shows the specified cumulative order. Percent attenuation is descriptive, order-dependent, non-additive, and not a mediated proportion."
+    },
+    {
+      "block": 60,
+      "kind": "paragraph",
+      "paragraph": 58,
+      "style": "Heading 2",
+      "text": "Reverse-causation, missing-data, and competing-risk analyses"
+    },
+    {
+      "block": 61,
+      "kind": "paragraph",
+      "paragraph": 59,
+      "style": "Normal",
+      "text": "Among participants free of prevalent CVD, the ≥9-h HR was 1.81 in Model 2 and 1.67 in Model 3. In the full-cycle landmark analyses, 2- and 5-year Model 2 HRs were 1.75 and 2.14; however, the comparison also changed cycle composition. Restricting the source to 2005–2014 cycles gave 0-, 2-, and 5-year Model 2 HRs of 1.92, 1.94, and 2.14, and Model 3 HRs of 1.73, 1.75, and 1.90. The ≥9-h time interaction was not significant in Model 2 (P=0.312) or Model 3 (P=0.321); global four-category interaction P values were 0.817 and 0.759. Multiple-imputation HRs were 1.74 and 1.59. The Fine–Gray weighted approximation remained supportive but secondary (Figure 4; Table 3)."
+    },
+    {
+      "block": 62,
+      "kind": "paragraph",
+      "paragraph": 60,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 63,
+      "kind": "paragraph",
+      "paragraph": 61,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 64,
+      "kind": "paragraph",
+      "paragraph": 62,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 65,
+      "kind": "paragraph",
+      "paragraph": 63,
+      "style": "Caption",
+      "text": "Figure 4. Robustness of the long-sleep association. Fine–Gray rows are weighted stratified-PSU sandwich approximations and are shown as secondary subdistribution-hazard sensitivity analyses; all other rows show cause-specific hazard ratios."
+    },
+    {
+      "block": 66,
+      "kind": "paragraph",
+      "paragraph": 64,
+      "style": "Caption",
+      "text": "Table 3. Robustness analyses for long sleep (≥9 versus 7–<8 h/night)"
+    },
+    {
+      "block": 68,
+      "kind": "paragraph",
+      "paragraph": 65,
+      "style": "Normal",
+      "text": "Values are effect estimates (95% confidence intervals). Model 2 adjusts the designated baseline confounders; Model 3 additionally adjusts cardiometabolic and pre-existing disease status. HR denotes cause-specific hazard ratio and SHR subdistribution hazard ratio. The 5-year lag sample is smaller because later NHANES cycles cannot contribute participants without at least 5 years of follow-up."
+    },
+    {
+      "block": 69,
+      "kind": "paragraph",
+      "paragraph": 66,
+      "style": "Heading 2",
+      "text": "Regression-standardized absolute risks"
+    },
+    {
+      "block": 70,
+      "kind": "paragraph",
+      "paragraph": 67,
+      "style": "Normal",
+      "text": "In Model 2, the 10-year standardized cumulative incidence was 2.88% (95% PSU-bootstrap interval 2.47%–3.30%) for ≥9 h and 1.87% (1.58%–2.19%) for 7–<8 h. The risk difference was 1.01 percentage points (0.61–1.45) using 500 bootstrap replicates."
+    },
+    {
+      "block": 71,
+      "kind": "paragraph",
+      "paragraph": 68,
+      "style": "Caption",
+      "text": "Table 4. Regression-standardized cumulative incidence of heart-disease death"
+    },
+    {
+      "block": 73,
+      "kind": "paragraph",
+      "paragraph": 69,
+      "style": "Normal",
+      "text": "Risks and risk differences are percentages with 95% percentile intervals from 500 stratified PSU bootstrap replicates. Regression standardization combined Model 2 cause-specific Cox models for heart-disease and other-cause death and retained competing deaths in cumulative incidence."
+    },
+    {
+      "block": 74,
+      "kind": "paragraph",
+      "paragraph": 70,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 75,
+      "kind": "paragraph",
+      "paragraph": 71,
+      "style": "Caption",
+      "text": "Figure 5. Model 2 regression-standardized cumulative incidence of heart-disease death in the presence of competing deaths. Shading shows 95% intervals from 500 stratified PSU bootstrap replicates. Curves are associational model-based contrasts, not intervention effects."
+    },
+    {
+      "block": 76,
+      "kind": "paragraph",
+      "paragraph": 72,
+      "style": "Heading 2",
+      "text": "Exploratory inflammatory pathway analyses"
+    },
+    {
+      "block": 77,
+      "kind": "paragraph",
+      "paragraph": 73,
+      "style": "Normal",
+      "text": "Sleep duration was associated with SIRI in categorical and spline models, but the magnitude was small; SII showed no overall spline association. On the same SIRI-complete sample, adding log-SIRI alone to Model 2 attenuated the long-sleep log-HR by 7.4%. In the cumulative sequence, the HR changed only from 1.54 before SIRI to 1.50 after SIRI. The full 25.4% reduction arose across BMI, hypertension/diabetes, CVD, and SIRI together and must not be attributed to inflammation."
+    },
+    {
+      "block": 78,
+      "kind": "paragraph",
+      "paragraph": 74,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 79,
+      "kind": "paragraph",
+      "paragraph": 75,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 80,
+      "kind": "paragraph",
+      "paragraph": 76,
+      "style": "Caption",
+      "text": "Figure 6. Survey-weighted restricted cubic splines relating sleep duration to SIRI (Panel A) and SII (Panel B). Values are ratios of adjusted geometric means relative to 7 h/night; shaded regions are 95% confidence intervals. Models adjust the designated baseline confounders. Concurrent measurement of sleep and inflammation precludes a strong causal-mediation interpretation."
+    },
+    {
+      "block": 81,
+      "kind": "paragraph",
+      "paragraph": 77,
+      "style": "Heading 1",
+      "text": "Discussion"
+    },
+    {
+      "block": 82,
+      "kind": "paragraph",
+      "paragraph": 78,
+      "style": "Normal",
+      "text": "This analysis supports a nonlinear association between sleep duration and heart disease mortality, with the most consistent elevation observed among adults reporting ≥9 h/night of sleep. The association was robust to alternative survey-design specifications, proportional hazards assessment, lagged analyses, missing-data approaches, competing-risk analyses, and regression-standardized risk estimation. Compared with 7–<8 h/night, long sleep was associated with an approximately one percentage-point higher 10-year standardized cumulative incidence of heart disease death. These findings indicate that long sleep duration identifies a population subgroup with elevated mortality risk, but they do not establish that extending sleep duration would increase or decrease mortality risk."
+    },
+    {
+      "block": 83,
+      "kind": "paragraph",
+      "paragraph": 79,
+      "style": "Normal",
+      "text": "The exposure–outcome pattern was nonlinear, with the lowest estimated hazard near 7 h/night. The association remained when alternative spline specifications were applied, reducing concern that the observed shape was driven solely by the prespecified clinical knot placement. The overall pattern is consistent with previous reports of U- or J-shaped associations between sleep duration and mortality; however, differences in outcome definitions, sleep assessment, and covariate structures complicate direct comparisons across studies. In particular, long sleep is difficult to interpret because it may reflect sleep disorders, depression, reduced physical activity, socioeconomic disadvantage, frailty, or undiagnosed disease rather than a direct adverse biological exposure."
+    },
+    {
+      "block": 84,
+      "kind": "paragraph",
+      "paragraph": 80,
+      "style": "Normal",
+      "text": "Reverse-causation analyses provided partial but not definitive reassurance. Exclusion of prevalent cardiovascular disease and lagged analyses did not materially eliminate the association, suggesting that recognized baseline cardiovascular disease alone does not fully explain the findings. However, longer lag analyses may alter the survivor population and calendar composition, and they cannot exclude occult disease, subclinical illness, or frailty. Therefore, persistence of the association after lagging should not be interpreted as proof of a delayed causal effect of long sleep."
+    },
+    {
+      "block": 85,
+      "kind": "paragraph",
+      "paragraph": 81,
+      "style": "Normal",
+      "text": "Adjustment for health-status variables attenuated the association between long sleep and heart disease mortality. This attenuation is compatible with several interpretations, including control of confounding, adjustment for intermediate pathways, or changes caused by hazard-ratio non-collapsibility. Because variables such as BMI, hypertension, diabetes, and prevalent cardiovascular disease may represent both markers of underlying health status and components of possible causal pathways, these analyses should not be interpreted as identifying a proportion mediated. The remaining association after health-status adjustment suggests that measured disease burden does not completely account for the observed relationship, while residual confounding remains plausible."
+    },
+    {
+      "block": 86,
+      "kind": "paragraph",
+      "paragraph": 82,
+      "style": "Normal",
+      "text": "Inflammatory marker analyses provided limited additional insight. SIRI showed a modest association with sleep duration, whereas SII showed no clear overall association. Adding SIRI to the health-status adjustment sequence produced only a small additional change in the long-sleep estimate. Because sleep duration and inflammatory markers were measured at the same examination, these analyses represent exploratory biomarker associations rather than causal mediation analyses. The results therefore do not support inflammation as a primary explanation for the association between long sleep and heart disease mortality."
+    },
+    {
+      "block": 87,
+      "kind": "paragraph",
+      "paragraph": 83,
+      "style": "Normal",
+      "text": "This study has several strengths. The analysis used a large nationally representative cohort with linked mortality follow-up and incorporated NHANES sampling weights, design-based variance estimation, common-sample model comparisons, spline analyses, multiple imputation, competing-risk standardization, and quantitative bias assessment. The prespecified estimand framework also helped distinguish observational associations from intervention effects and avoided interpreting health-status adjustment as a causal mediation analysis."
+    },
+    {
+      "block": 88,
+      "kind": "paragraph",
+      "paragraph": 84,
+      "style": "Normal",
+      "text": "Several limitations remain. Sleep duration was self-reported and measured at a single baseline examination; therefore, measurement error, changes in sleep patterns over time, and misclassification of long sleep are possible. Important potential confounders, including sleep quality, obstructive sleep apnea, depression, physical activity, occupational factors, and frailty, were incompletely measured or unavailable across NHANES cycles. Quantitative bias analyses can illustrate the strength of unmeasured confounding required to explain the association but cannot eliminate such bias. Landmark analyses may introduce selection due to conditioning on survival, and standardized risks depend on modeling assumptions. Finally, these findings apply to the US noninstitutionalized population and should not be interpreted as evidence that changing sleep duration would alter mortality risk."
+    },
+    {
+      "block": 89,
+      "kind": "paragraph",
+      "paragraph": 85,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 90,
+      "kind": "paragraph",
+      "paragraph": 86,
+      "style": "Heading 1",
+      "text": "Conclusion"
+    },
+    {
+      "block": 91,
+      "kind": "paragraph",
+      "paragraph": 87,
+      "style": "Normal",
+      "text": "In NHANES 2005–2018, reporting ≥9 h/night of sleep was consistently associated with higher heart disease mortality across survey-weighted models and multiple sensitivity analyses. The association corresponded to an approximately one percentage-point higher 10-year standardized cumulative incidence compared with 7–<8 h/night. Attenuation after adjustment for health-status variables, limited additional contribution from inflammatory markers, and quantitative bias analyses support interpreting long sleep as a marker of elevated underlying health risk rather than evidence of a causal effect of sleep duration on mortality. Further studies with repeated objective sleep measurements and improved assessment of sleep disorders, frailty, and other health-related factors are needed to clarify the mechanisms underlying this association."
+    },
+    {
+      "block": 92,
+      "kind": "paragraph",
+      "paragraph": 88,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 93,
+      "kind": "paragraph",
+      "paragraph": 89,
+      "style": "Heading 1",
+      "text": "Ethics statement"
+    },
+    {
+      "block": 94,
+      "kind": "paragraph",
+      "paragraph": 90,
+      "style": "Normal",
+      "text": "NHANES protocols were approved by the NCHS Research Ethics Review Board, and all participants provided written informed consent. This secondary analysis used publicly available, de-identified data."
+    },
+    {
+      "block": 95,
+      "kind": "paragraph",
+      "paragraph": 91,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 96,
+      "kind": "paragraph",
+      "paragraph": 92,
+      "style": "Heading 1",
+      "text": "Author contributions"
+    },
+    {
+      "block": 97,
+      "kind": "paragraph",
+      "paragraph": 93,
+      "style": "Normal",
+      "text": "JC conceived and designed the study, performed the statistical analyses, interpreted the data, drafted the manuscript, critically revised the manuscript, and approved the final version."
+    },
+    {
+      "block": 98,
+      "kind": "paragraph",
+      "paragraph": 94,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 99,
+      "kind": "paragraph",
+      "paragraph": 95,
+      "style": "Heading 1",
+      "text": "Funding"
+    },
+    {
+      "block": 100,
+      "kind": "paragraph",
+      "paragraph": 96,
+      "style": "Normal",
+      "text": "The author received no financial support for the research, authorship, or publication of this article."
+    },
+    {
+      "block": 101,
+      "kind": "paragraph",
+      "paragraph": 97,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 102,
+      "kind": "paragraph",
+      "paragraph": 98,
+      "style": "Heading 1",
+      "text": "Conflict of interest"
+    },
+    {
+      "block": 103,
+      "kind": "paragraph",
+      "paragraph": 99,
+      "style": "Normal",
+      "text": "The author declares no commercial or financial relationships that could be construed as a potential conflict of interest."
+    },
+    {
+      "block": 104,
+      "kind": "paragraph",
+      "paragraph": 100,
+      "style": "Heading 1",
+      "text": "Data availability statement"
+    },
+    {
+      "block": 105,
+      "kind": "paragraph",
+      "paragraph": 101,
+      "style": "Normal",
+      "text": "Original NHANES component and linked mortality data are available from the National Center for Health Statistics."
+    },
+    {
+      "block": 106,
+      "kind": "paragraph",
+      "paragraph": 102,
+      "style": "Heading 1",
+      "text": "References"
+    },
+    {
+      "block": 107,
+      "kind": "paragraph",
+      "paragraph": 103,
+      "style": "Normal",
+      "text": "1. Lloyd-Jones DM, Allen NB, Anderson CAM, Black T, Brewer LC, Foraker RE, Grandner MA, Lavretsky H, Perak AM, Sharma G, Rosamond W: Life's Essential 8: Updating and Enhancing the American Heart Association's Construct of Cardiovascular Health: A Presidential Advisory From the American Heart Association. Circulation 2022, 146(5):e18–e43. doi:10.1161/CIR.0000000000001078."
+    },
+    {
+      "block": 108,
+      "kind": "paragraph",
+      "paragraph": 104,
+      "style": "Normal",
+      "text": "2. Jaspan VN, Greenberg GS, Parihar S, Park CM, Somers VK, Shapiro MD, Lavie CJ, Virani SS, Slipczuk L: The Role of Sleep in Cardiovascular Disease. Curr Atheroscler Rep 2024, 26(7):249–262. doi:10.1007/s11883-024-01207-5."
+    },
+    {
+      "block": 109,
+      "kind": "paragraph",
+      "paragraph": 105,
+      "style": "Normal",
+      "text": "3. Korostovtseva L, Bochkarev M, Sviryaev Y: Sleep and Cardiovascular Risk. Sleep Med Clin 2021, 16(3):485–497. doi:10.1016/j.jsmc.2021.05.001."
+    },
+    {
+      "block": 110,
+      "kind": "paragraph",
+      "paragraph": 106,
+      "style": "Normal",
+      "text": "4. Watson NF, Badr MS, Belenky G, Bliwise DL, Buxton OM, Buysse D, Dinges DF, Gangwisch J, Grandner MA, Kushida C, Malhotra RK, Martin JL, Patel SR, Quan SF, Tasali E: Recommended Amount of Sleep for a Healthy Adult: A Joint Consensus Statement of the American Academy of Sleep Medicine and Sleep Research Society. Sleep 2015, 38(6):843–844. doi:10.5665/sleep.4716."
+    },
+    {
+      "block": 111,
+      "kind": "paragraph",
+      "paragraph": 107,
+      "style": "Normal",
+      "text": "5. Kwok CS, Kontopantelis E, Kuligowski G, Gray M, Muhyaldeen A, Gale CP, Peat GM, Cleator J, Chew-Graham C, Loke YK, Mamas AM: Self-Reported Sleep Duration and Quality and Cardiovascular Disease and Mortality: A Dose-Response Meta-Analysis. J Am Heart Assoc 2018, 7(15):e008552. doi:10.1161/JAHA.118.008552."
+    },
+    {
+      "block": 112,
+      "kind": "paragraph",
+      "paragraph": 108,
+      "style": "Normal",
+      "text": "6. Yin J, Jin X, Shan Z, Li S, Huang H, Li P, Peng X, Peng Z, Yu K, Bao W, Yang W, Chen X, Liu L: Relationship of Sleep Duration With All-Cause Mortality and Cardiovascular Events: A Systematic Review and Dose-Response Meta-Analysis of Prospective Cohort Studies. J Am Heart Assoc 2017, 6(9):e005947. doi:10.1161/JAHA.117.005947."
+    },
+    {
+      "block": 113,
+      "kind": "paragraph",
+      "paragraph": 109,
+      "style": "Normal",
+      "text": "7. Jin Q, Yang N, Dai J, Zhao Y, Zhang X, Yin J, Yan Y: Association of Sleep Duration With All-Cause and Cardiovascular Mortality: A Prospective Cohort Study. Front Public Health 2022, 10:880276. doi:10.3389/fpubh.2022.880276."
+    },
+    {
+      "block": 114,
+      "kind": "paragraph",
+      "paragraph": 110,
+      "style": "Normal",
+      "text": "8. Patel SR, Malhotra A, Gottlieb DJ, White DP, Hu FB: Correlates of Long Sleep Duration. Sleep 2006, 29(7):881–889. doi:10.1093/sleep/29.7.881."
+    },
+    {
+      "block": 115,
+      "kind": "paragraph",
+      "paragraph": 111,
+      "style": "Normal",
+      "text": "9. Spiesshoefer J, Linz D, Skobel E, Arzt M, Stadler S, Schoebel C, Fietze I, Penzel T, Sinha AM, Fox H, Oldenburg O: Sleep - the yet underappreciated player in cardiovascular diseases: A clinical review from the German Cardiac Society Working Group on Sleep Disordered Breathing. Eur J Prev Cardiol 2021, 28(2):189–200. doi:10.1177/2047487319879526."
+    },
+    {
+      "block": 116,
+      "kind": "paragraph",
+      "paragraph": 112,
+      "style": "Normal",
+      "text": "10. Mullington JM, Simpson NS, Meier-Ewert HK, Haack M: Sleep loss and inflammation. Best Pract Res Clin Endocrinol Metab 2010, 24(5):775–784. doi:10.1016/j.beem.2010.08.014."
+    },
+    {
+      "block": 117,
+      "kind": "paragraph",
+      "paragraph": 113,
+      "style": "Normal",
+      "text": "11. Yeghiazarians Y, Jneid H, Tietjens JR, Redline S, Brown DL, El-Sherif N, Mehra R, Bozkurt B, Ndumele CE, Somers VK: Obstructive Sleep Apnea and Cardiovascular Disease: A Scientific Statement From the American Heart Association. Circulation 2021, 144(3):e56–e67. doi:10.1161/CIR.0000000000000988."
+    },
+    {
+      "block": 118,
+      "kind": "paragraph",
+      "paragraph": 114,
+      "style": "Normal",
+      "text": "12. Floras JS: Sleep apnea and cardiovascular risk. J Cardiol 2014, 63(1):3–8. doi:10.1016/j.jjcc.2013.08.009."
+    },
+    {
+      "block": 119,
+      "kind": "paragraph",
+      "paragraph": 115,
+      "style": "Normal",
+      "text": "13. Caples SM, Garcia-Touchard A, Somers VK: Sleep-disordered breathing and cardiovascular risk. Sleep 2007, 30(3):291–304. doi:10.1093/sleep/30.3.291."
+    },
+    {
+      "block": 120,
+      "kind": "paragraph",
+      "paragraph": 116,
+      "style": "Normal",
+      "text": "14. Li Y, Miao Y, Zhang Q: Causal associations of obstructive sleep apnea with cardiovascular disease: a Mendelian randomization study. Sleep 2023, 46(3):zsac298. doi:10.1093/sleep/zsac298."
+    },
+    {
+      "block": 121,
+      "kind": "paragraph",
+      "paragraph": 117,
+      "style": "Normal",
+      "text": "15. National Center for Health Statistics: NHANES Survey Methods and Analytic Guidelines. Centers for Disease Control and Prevention. https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx (accessed 10 August 2026)."
+    },
+    {
+      "block": 122,
+      "kind": "paragraph",
+      "paragraph": 118,
+      "style": "Normal",
+      "text": "16. VanderWeele TJ: Causal mediation analysis with survival data. Epidemiology 2011, 22(4):582–585. doi:10.1097/EDE.0b013e31821db37e."
+    },
+    {
+      "block": 123,
+      "kind": "paragraph",
+      "paragraph": 119,
+      "style": "Normal",
+      "text": "17. Schuler MS, Coffman DL, Stuart EA, Nguyen TQ, Vegetabile B, McCaffrey DF: Practical challenges in mediation analysis: a guide for applied researchers. Health Serv Outcomes Res Methodol 2025, 25(1):57–84. doi:10.1007/s10742-024-00327-4."
+    },
+    {
+      "block": 124,
+      "kind": "paragraph",
+      "paragraph": 120,
+      "style": "Normal",
+      "text": "18. Georgeson AR, Alvarez-Bartolo D, MacKinnon DP: A sensitivity analysis for temporal bias in cross-sectional mediation. Psychol Methods 2025, 30(6):1326–1344. doi:10.1037/met0000628."
+    },
+    {
+      "block": 125,
+      "kind": "paragraph",
+      "paragraph": 121,
+      "style": "Normal",
+      "text": "19. Fine JP, Gray RJ: A proportional hazards model for the subdistribution of a competing risk. J Am Stat Assoc 1999, 94(446):496–509. doi:10.1080/01621459.1999.10474144."
+    },
+    {
+      "block": 126,
+      "kind": "paragraph",
+      "paragraph": 122,
+      "style": "Normal",
+      "text": "20. Hernán MA, Sauer BC, Hernández-Díaz S, Platt R, Shrier I: Specifying a target trial prevents immortal time bias and other self-inflicted injuries in observational analyses. J Clin Epidemiol 2016, 79:70–75. doi:10.1016/j.jclinepi.2016.04.014."
+    },
+    {
+      "block": 127,
+      "kind": "paragraph",
+      "paragraph": 123,
+      "style": "Normal",
+      "text": "21. White IR, Royston P, Wood AM: Multiple imputation using chained equations: issues and guidance for practice. Stat Med 2011, 30(4):377–399. doi:10.1002/sim.4067."
+    },
+    {
+      "block": 128,
+      "kind": "paragraph",
+      "paragraph": 124,
+      "style": "Normal",
+      "text": "22. Syriopoulou E, Mozumder SI, Rutherford MJ, Lambert PC: Estimating causal effects in the presence of competing events using regression standardisation with the Stata command standsurv. BMC Med Res Methodol 2022, 22:226. doi:10.1186/s12874-022-01666-x."
+    },
+    {
+      "block": 129,
+      "kind": "paragraph",
+      "paragraph": 125,
+      "style": "Normal",
+      "text": "23. VanderWeele TJ, Ding P: Sensitivity analysis in observational research: introducing the E-value. Ann Intern Med 2017, 167(4):268–274. doi:10.7326/M16-2607."
+    },
+    {
+      "block": 130,
+      "kind": "paragraph",
+      "paragraph": 126,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 131,
+      "kind": "paragraph",
+      "paragraph": 127,
+      "style": "Normal",
+      "text": ""
+    },
+    {
+      "block": 132,
+      "kind": "paragraph",
+      "paragraph": 128,
+      "style": "Normal",
+      "text": ""
+    }
+  ],
+  "tables": [
+    {
+      "block": 44,
+      "kind": "table",
+      "table": 1,
+      "rows": [
+        [
+          "Characteristic",
+          "Overall (N=37,516)",
+          "No heart disease death (N=36,513)",
+          "Heart disease death (N=1,003)",
+          ""
+        ],
+        [
+          "Age, years",
+          "47.34 (17.01)",
+          "46.90 (16.77)",
+          "70.47 (12.56)",
+          ""
+        ],
+        [
+          "Sleep duration, h/night",
+          "7.09 (1.36)",
+          "7.09 (1.35)",
+          "7.18 (1.57)",
+          ""
+        ],
+        [
+          "Poverty-income ratio",
+          "3.01 (1.64); missing 3,370",
+          "3.02 (1.65); missing 3,300",
+          "2.38 (1.44); missing 70",
+          ""
+        ],
+        [
+          "BMI, kg/m2",
+          "29.00 (6.88); missing 527",
+          "28.99 (6.87); missing 474",
+          "29.80 (7.48); missing 53",
+          ""
+        ],
+        [
+          "Sleep-duration group",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "<6 h",
+          "5,155 (11.6%)",
+          "5,007 (11.5%)",
+          "148 (13.6%)",
+          ""
+        ],
+        [
+          "6-<7 h",
+          "7,987 (20.7%)",
+          "7,792 (20.7%)",
+          "195 (19.9%)",
+          ""
+        ],
+        [
+          "7-<8 h",
+          "9,958 (29.5%)",
+          "9,776 (29.7%)",
+          "182 (20.1%)",
+          ""
+        ],
+        [
+          "8-<9 h",
+          "10,132 (27.5%)",
+          "9,828 (27.5%)",
+          "304 (29.5%)",
+          ""
+        ],
+        [
+          ">=9 h",
+          "4,284 (10.7%)",
+          "4,110 (10.6%)",
+          "174 (16.9%)",
+          ""
+        ],
+        [
+          "Sex",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Male",
+          "18,155 (48.2%)",
+          "17,576 (48.1%)",
+          "579 (53.4%)",
+          ""
+        ],
+        [
+          "Female",
+          "19,361 (51.8%)",
+          "18,937 (51.9%)",
+          "424 (46.6%)",
+          ""
+        ],
+        [
+          "Race/ethnicity",
+          "",
+          "",
+          "",
+          ""
+        ],
+        [
+          "Mexican American",
+          "5,885 (8.5%)",
+          "5,809 (8.6%)",
+          "76 (3.9%)",
+          ""
+        ],
+        [
+          "Other Hispanic",
+          "3,578 (5.6%)",
+          "3,525 (5.6%)",
+          "53 (2.4%)",
+          ""
+        ],
+        [
+          "Non-Hispanic White",
+          "15,671 (66.8%)",
+          "15,050 (66.6%)",
+          "621 (78.4%)",
+          ""
+        ],
+        [
+          "Non-Hispanic Black",
+          "8,112 (11.3%)",
+          "7,890 (11.3%)",
+          "222 (12.1%)",
+          ""
+        ],
+        [
+          "Other race",
+          "4,270 (7.8%)",
+          "4,239 (7.9%)",
+          "31 (3.2%)",
+          ""
+        ],
+        [
+          "Education",
+          "missing 46",
+          "missing 41",
+          "missing 5",
+          ""
+        ],
+        [
+          "<High school",
+          "9,390 (16.2%)",
+          "9,016 (15.9%)",
+          "374 (29.5%)",
+          ""
+        ],
+        [
+          "High school/GED",
+          "8,582 (23.2%)",
+          "8,326 (23.1%)",
+          "256 (28.9%)",
+          ""
+        ],
+        [
+          ">High school",
+          "19,498 (60.6%)",
+          "19,130 (61.0%)",
+          "368 (41.6%)",
+          ""
+        ],
+        [
+          "Poverty-income ratio group",
+          "missing 3,370",
+          "missing 3,300",
+          "missing 70",
+          ""
+        ],
+        [
+          "<1.30",
+          "10,766 (21.3%)",
+          "10,433 (21.1%)",
+          "333 (29.1%)",
+          ""
+        ],
+        [
+          "1.30-3.49",
+          "12,951 (35.8%)",
+          "12,509 (35.6%)",
+          "442 (47.8%)",
+          ""
+        ],
+        [
+          ">=3.50",
+          "10,429 (42.9%)",
+          "10,271 (43.3%)",
+          "158 (23.1%)",
+          ""
+        ],
+        [
+          "BMI group",
+          "missing 527",
+          "missing 474",
+          "missing 53",
+          ""
+        ],
+        [
+          "<25",
+          "10,732 (30.0%)",
+          "10,477 (30.1%)",
+          "255 (26.7%)",
+          ""
+        ],
+        [
+          "25-29.9",
+          "12,235 (32.9%)",
+          "11,911 (32.9%)",
+          "324 (31.0%)",
+          ""
+        ],
+        [
+          ">=30",
+          "14,022 (37.1%)",
+          "13,651 (37.0%)",
+          "371 (42.3%)",
+          ""
+        ],
+        [
+          "Ever smoked 100 cigarettes",
+          "missing 25",
+          "missing 25",
+          "",
+          ""
+        ],
+        [
+          "Never smoker",
+          "20,857 (55.3%)",
+          "20,402 (55.5%)",
+          "455 (45.8%)",
+          ""
+        ],
+        [
+          "Ever smoker",
+          "16,634 (44.7%)",
+          "16,086 (44.5%)",
+          "548 (54.2%)",
+          ""
+        ],
+        [
+          "Marital status",
+          "missing 23",
+          "missing 23",
+          "",
+          ""
+        ],
+        [
+          "Married/partner",
+          "22,369 (63.4%)",
+          "21,902 (63.7%)",
+          "467 (49.3%)",
+          ""
+        ],
+        [
+          "Not married/partner",
+          "15,124 (36.6%)",
+          "14,588 (36.3%)",
+          "536 (50.7%)",
+          ""
+        ],
+        [
+          "Hypertension history",
+          "missing 3",
+          "missing 3",
+          "",
+          ""
+        ],
+        [
+          "No",
+          "21,682 (62.5%)",
+          "21,461 (63.3%)",
+          "221 (22.7%)",
+          ""
+        ],
+        [
+          "Yes",
+          "15,831 (37.5%)",
+          "15,049 (36.7%)",
+          "782 (77.3%)",
+          ""
+        ],
+        [
+          "Diabetes history",
+          "missing 688",
+          "missing 687",
+          "missing 1",
+          ""
+        ],
+        [
+          "No",
+          "29,857 (85.9%)",
+          "29,265 (86.4%)",
+          "592 (63.1%)",
+          ""
+        ],
+        [
+          "Yes",
+          "6,971 (14.1%)",
+          "6,561 (13.6%)",
+          "410 (36.9%)",
+          ""
+        ],
+        [
+          "Prevalent CVD",
+          "missing 156",
+          "missing 147",
+          "missing 9",
+          ""
+        ],
+        [
+          "No",
+          "34,169 (93.2%)",
+          "33,569 (93.8%)",
+          "600 (61.6%)",
+          ""
+        ],
+        [
+          "Yes",
+          "3,191 (6.8%)",
+          "2,797 (6.2%)",
+          "394 (38.4%)",
+          ""
+        ]
+      ],
+      "n_rows": 47,
+      "n_columns": 5
+    },
+    {
+      "block": 50,
+      "kind": "table",
+      "table": 2,
+      "rows": [
+        [
+          "Sleep duration",
+          "Model 1\nHR (95% CI)",
+          "Model 2\nHR (95% CI)",
+          "Model 3\nHR (95% CI)"
+        ],
+        [
+          "<6 h",
+          "1.61 (1.18–2.21)",
+          "1.41 (1.03–1.94)",
+          "1.21 (0.88–1.65)"
+        ],
+        [
+          "6–<7 h",
+          "1.44 (1.11–1.87)",
+          "1.35 (1.04–1.76)",
+          "1.29 (1.00–1.67)"
+        ],
+        [
+          "7–<8 h",
+          "Reference",
+          "Reference",
+          "Reference"
+        ],
+        [
+          "8–<9 h",
+          "1.25 (1.00–1.57)",
+          "1.22 (0.97–1.55)",
+          "1.19 (0.94–1.50)"
+        ],
+        [
+          "≥9 h",
+          "1.78 (1.36–2.32)",
+          "1.70 (1.30–2.22)",
+          "1.53 (1.18–1.99)"
+        ],
+        [
+          "Global P",
+          "<0.001",
+          "0.005",
+          "0.033"
+        ]
+      ],
+      "n_rows": 7,
+      "n_columns": 4
+    },
+    {
+      "block": 67,
+      "kind": "table",
+      "table": 3,
+      "rows": [
+        [
+          "Analysis",
+          "Model 2",
+          "Model 3",
+          "N",
+          "Heart deaths",
+          "Measure"
+        ],
+        [
+          "Free of prevalent CVD",
+          "1.81 (1.28–2.57)",
+          "1.67 (1.19–2.36)",
+          "30096",
+          "531",
+          "HR"
+        ],
+        [
+          "Exclude first 2 years",
+          "1.75 (1.33–2.29)",
+          "1.57 (1.20–2.05)",
+          "30198",
+          "733",
+          "HR"
+        ],
+        [
+          "Exclude first 5 years",
+          "2.14 (1.62–2.82)",
+          "1.90 (1.44–2.51)",
+          "22610",
+          "446",
+          "HR"
+        ],
+        [
+          "Multiple imputation",
+          "1.74 (1.35–2.23)",
+          "1.59 (1.24–2.03)",
+          "37516",
+          "1003",
+          "HR"
+        ],
+        [
+          "Fine–Gray sensitivity*",
+          "1.53 (1.17–2.02)",
+          "1.39 (1.06–1.83)",
+          "32880",
+          "875",
+          "SHR"
+        ]
+      ],
+      "n_rows": 6,
+      "n_columns": 6
+    },
+    {
+      "block": 72,
+      "kind": "table",
+      "table": 4,
+      "rows": [
+        [
+          "Sleep duration",
+          "5-year risk",
+          "10-year risk",
+          "10-year RD vs 7–<8 h, percentage points"
+        ],
+        [
+          "<6 h",
+          "1.08% (0.89–1.27)",
+          "2.39% (2.03–2.74)",
+          "0.52 (0.08–0.94)"
+        ],
+        [
+          "6–<7 h",
+          "1.06% (0.91–1.23)",
+          "2.43% (2.14–2.72)",
+          "0.56 (0.17–0.90)"
+        ],
+        [
+          "7–<8 h",
+          "0.80% (0.66–0.94)",
+          "1.87% (1.58–2.19)",
+          "Reference"
+        ],
+        [
+          "8–<9 h",
+          "0.96% (0.83–1.09)",
+          "2.19% (1.95–2.44)",
+          "0.32 (0.02–0.63)"
+        ],
+        [
+          "≥9 h",
+          "1.30% (1.11–1.48)",
+          "2.88% (2.47–3.30)",
+          "1.01 (0.61–1.45)"
+        ]
+      ],
+      "n_rows": 6,
+      "n_columns": 4
+    }
+  ],
+  "captions": [
+    {
+      "block": 23,
+      "kind": "paragraph",
+      "paragraph": 23,
+      "style": "Caption",
+      "text": "Figure 1. Causal structures guiding model interpretation. Panel A shows the etiologic pathway of interest; Panel B shows an alternative in which underlying poor health causes both longer sleep and mortality. Solid arrows indicate assumed causal relations and dashed arrows mark temporally uncertain pathways. SIRI and SII were measured at the same baseline visit as sleep duration; therefore, pathway analyses are exploratory rather than causal mediation estimates [16–18]."
+    },
+    {
+      "block": 43,
+      "kind": "paragraph",
+      "paragraph": 43,
+      "style": "Caption",
+      "text": "Table 1. Baseline characteristics by heart disease mortality status"
+    },
+    {
+      "block": 49,
+      "kind": "paragraph",
+      "paragraph": 48,
+      "style": "Caption",
+      "text": "Table 2. Survey-weighted Cox models for sleep duration and heart disease mortality"
+    },
+    {
+      "block": 54,
+      "kind": "paragraph",
+      "paragraph": 52,
+      "style": "Caption",
+      "text": "Figure 2. Survey-weighted restricted cubic splines for sleep duration and heart disease mortality in the full analytic cohort (Panel A) and among participants free of prevalent CVD at baseline (Panel B). Both panels use the main confounder model, 7 h/night as the reference, and knots at 5, 6, 7, 8, and 9 h/night. Shaded regions are 95% confidence intervals."
+    },
+    {
+      "block": 59,
+      "kind": "paragraph",
+      "paragraph": 57,
+      "style": "Caption",
+      "text": "Figure 3. One-at-a-time and cumulative health-status adjustment for ≥9 versus 7–<8 h/night. Panel A adds each domain separately to Model 2; Panel B shows the specified cumulative order. Percent attenuation is descriptive, order-dependent, non-additive, and not a mediated proportion."
+    },
+    {
+      "block": 65,
+      "kind": "paragraph",
+      "paragraph": 63,
+      "style": "Caption",
+      "text": "Figure 4. Robustness of the long-sleep association. Fine–Gray rows are weighted stratified-PSU sandwich approximations and are shown as secondary subdistribution-hazard sensitivity analyses; all other rows show cause-specific hazard ratios."
+    },
+    {
+      "block": 66,
+      "kind": "paragraph",
+      "paragraph": 64,
+      "style": "Caption",
+      "text": "Table 3. Robustness analyses for long sleep (≥9 versus 7–<8 h/night)"
+    },
+    {
+      "block": 71,
+      "kind": "paragraph",
+      "paragraph": 68,
+      "style": "Caption",
+      "text": "Table 4. Regression-standardized cumulative incidence of heart-disease death"
+    },
+    {
+      "block": 75,
+      "kind": "paragraph",
+      "paragraph": 71,
+      "style": "Caption",
+      "text": "Figure 5. Model 2 regression-standardized cumulative incidence of heart-disease death in the presence of competing deaths. Shading shows 95% intervals from 500 stratified PSU bootstrap replicates. Curves are associational model-based contrasts, not intervention effects."
+    },
+    {
+      "block": 80,
+      "kind": "paragraph",
+      "paragraph": 76,
+      "style": "Caption",
+      "text": "Figure 6. Survey-weighted restricted cubic splines relating sleep duration to SIRI (Panel A) and SII (Panel B). Values are ratios of adjusted geometric means relative to 7 h/night; shaded regions are 95% confidence intervals. Models adjust the designated baseline confounders. Concurrent measurement of sleep and inflammation precludes a strong causal-mediation interpretation."
+    }
+  ],
+  "references": [
+    {
+      "number": 1,
+      "text": "Lloyd-Jones DM, Allen NB, Anderson CAM, Black T, Brewer LC, Foraker RE, Grandner MA, Lavretsky H, Perak AM, Sharma G, Rosamond W: Life's Essential 8: Updating and Enhancing the American Heart Association's Construct of Cardiovascular Health: A Presidential Advisory From the American Heart Association. Circulation 2022, 146(5):e18–e43. doi:10.1161/CIR.0000000000001078.",
+      "paragraph": 103,
+      "block": 107
+    },
+    {
+      "number": 2,
+      "text": "Jaspan VN, Greenberg GS, Parihar S, Park CM, Somers VK, Shapiro MD, Lavie CJ, Virani SS, Slipczuk L: The Role of Sleep in Cardiovascular Disease. Curr Atheroscler Rep 2024, 26(7):249–262. doi:10.1007/s11883-024-01207-5.",
+      "paragraph": 104,
+      "block": 108
+    },
+    {
+      "number": 3,
+      "text": "Korostovtseva L, Bochkarev M, Sviryaev Y: Sleep and Cardiovascular Risk. Sleep Med Clin 2021, 16(3):485–497. doi:10.1016/j.jsmc.2021.05.001.",
+      "paragraph": 105,
+      "block": 109
+    },
+    {
+      "number": 4,
+      "text": "Watson NF, Badr MS, Belenky G, Bliwise DL, Buxton OM, Buysse D, Dinges DF, Gangwisch J, Grandner MA, Kushida C, Malhotra RK, Martin JL, Patel SR, Quan SF, Tasali E: Recommended Amount of Sleep for a Healthy Adult: A Joint Consensus Statement of the American Academy of Sleep Medicine and Sleep Research Society. Sleep 2015, 38(6):843–844. doi:10.5665/sleep.4716.",
+      "paragraph": 106,
+      "block": 110
+    },
+    {
+      "number": 5,
+      "text": "Kwok CS, Kontopantelis E, Kuligowski G, Gray M, Muhyaldeen A, Gale CP, Peat GM, Cleator J, Chew-Graham C, Loke YK, Mamas AM: Self-Reported Sleep Duration and Quality and Cardiovascular Disease and Mortality: A Dose-Response Meta-Analysis. J Am Heart Assoc 2018, 7(15):e008552. doi:10.1161/JAHA.118.008552.",
+      "paragraph": 107,
+      "block": 111
+    },
+    {
+      "number": 6,
+      "text": "Yin J, Jin X, Shan Z, Li S, Huang H, Li P, Peng X, Peng Z, Yu K, Bao W, Yang W, Chen X, Liu L: Relationship of Sleep Duration With All-Cause Mortality and Cardiovascular Events: A Systematic Review and Dose-Response Meta-Analysis of Prospective Cohort Studies. J Am Heart Assoc 2017, 6(9):e005947. doi:10.1161/JAHA.117.005947.",
+      "paragraph": 108,
+      "block": 112
+    },
+    {
+      "number": 7,
+      "text": "Jin Q, Yang N, Dai J, Zhao Y, Zhang X, Yin J, Yan Y: Association of Sleep Duration With All-Cause and Cardiovascular Mortality: A Prospective Cohort Study. Front Public Health 2022, 10:880276. doi:10.3389/fpubh.2022.880276.",
+      "paragraph": 109,
+      "block": 113
+    },
+    {
+      "number": 8,
+      "text": "Patel SR, Malhotra A, Gottlieb DJ, White DP, Hu FB: Correlates of Long Sleep Duration. Sleep 2006, 29(7):881–889. doi:10.1093/sleep/29.7.881.",
+      "paragraph": 110,
+      "block": 114
+    },
+    {
+      "number": 9,
+      "text": "Spiesshoefer J, Linz D, Skobel E, Arzt M, Stadler S, Schoebel C, Fietze I, Penzel T, Sinha AM, Fox H, Oldenburg O: Sleep - the yet underappreciated player in cardiovascular diseases: A clinical review from the German Cardiac Society Working Group on Sleep Disordered Breathing. Eur J Prev Cardiol 2021, 28(2):189–200. doi:10.1177/2047487319879526.",
+      "paragraph": 111,
+      "block": 115
+    },
+    {
+      "number": 10,
+      "text": "Mullington JM, Simpson NS, Meier-Ewert HK, Haack M: Sleep loss and inflammation. Best Pract Res Clin Endocrinol Metab 2010, 24(5):775–784. doi:10.1016/j.beem.2010.08.014.",
+      "paragraph": 112,
+      "block": 116
+    },
+    {
+      "number": 11,
+      "text": "Yeghiazarians Y, Jneid H, Tietjens JR, Redline S, Brown DL, El-Sherif N, Mehra R, Bozkurt B, Ndumele CE, Somers VK: Obstructive Sleep Apnea and Cardiovascular Disease: A Scientific Statement From the American Heart Association. Circulation 2021, 144(3):e56–e67. doi:10.1161/CIR.0000000000000988.",
+      "paragraph": 113,
+      "block": 117
+    },
+    {
+      "number": 12,
+      "text": "Floras JS: Sleep apnea and cardiovascular risk. J Cardiol 2014, 63(1):3–8. doi:10.1016/j.jjcc.2013.08.009.",
+      "paragraph": 114,
+      "block": 118
+    },
+    {
+      "number": 13,
+      "text": "Caples SM, Garcia-Touchard A, Somers VK: Sleep-disordered breathing and cardiovascular risk. Sleep 2007, 30(3):291–304. doi:10.1093/sleep/30.3.291.",
+      "paragraph": 115,
+      "block": 119
+    },
+    {
+      "number": 14,
+      "text": "Li Y, Miao Y, Zhang Q: Causal associations of obstructive sleep apnea with cardiovascular disease: a Mendelian randomization study. Sleep 2023, 46(3):zsac298. doi:10.1093/sleep/zsac298.",
+      "paragraph": 116,
+      "block": 120
+    },
+    {
+      "number": 15,
+      "text": "National Center for Health Statistics: NHANES Survey Methods and Analytic Guidelines. Centers for Disease Control and Prevention. https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx (accessed 10 August 2026).",
+      "paragraph": 117,
+      "block": 121
+    },
+    {
+      "number": 16,
+      "text": "VanderWeele TJ: Causal mediation analysis with survival data. Epidemiology 2011, 22(4):582–585. doi:10.1097/EDE.0b013e31821db37e.",
+      "paragraph": 118,
+      "block": 122
+    },
+    {
+      "number": 17,
+      "text": "Schuler MS, Coffman DL, Stuart EA, Nguyen TQ, Vegetabile B, McCaffrey DF: Practical challenges in mediation analysis: a guide for applied researchers. Health Serv Outcomes Res Methodol 2025, 25(1):57–84. doi:10.1007/s10742-024-00327-4.",
+      "paragraph": 119,
+      "block": 123
+    },
+    {
+      "number": 18,
+      "text": "Georgeson AR, Alvarez-Bartolo D, MacKinnon DP: A sensitivity analysis for temporal bias in cross-sectional mediation. Psychol Methods 2025, 30(6):1326–1344. doi:10.1037/met0000628.",
+      "paragraph": 120,
+      "block": 124
+    },
+    {
+      "number": 19,
+      "text": "Fine JP, Gray RJ: A proportional hazards model for the subdistribution of a competing risk. J Am Stat Assoc 1999, 94(446):496–509. doi:10.1080/01621459.1999.10474144.",
+      "paragraph": 121,
+      "block": 125
+    },
+    {
+      "number": 20,
+      "text": "Hernán MA, Sauer BC, Hernández-Díaz S, Platt R, Shrier I: Specifying a target trial prevents immortal time bias and other self-inflicted injuries in observational analyses. J Clin Epidemiol 2016, 79:70–75. doi:10.1016/j.jclinepi.2016.04.014.",
+      "paragraph": 122,
+      "block": 126
+    },
+    {
+      "number": 21,
+      "text": "White IR, Royston P, Wood AM: Multiple imputation using chained equations: issues and guidance for practice. Stat Med 2011, 30(4):377–399. doi:10.1002/sim.4067.",
+      "paragraph": 123,
+      "block": 127
+    },
+    {
+      "number": 22,
+      "text": "Syriopoulou E, Mozumder SI, Rutherford MJ, Lambert PC: Estimating causal effects in the presence of competing events using regression standardisation with the Stata command standsurv. BMC Med Res Methodol 2022, 22:226. doi:10.1186/s12874-022-01666-x.",
+      "paragraph": 124,
+      "block": 128
+    },
+    {
+      "number": 23,
+      "text": "VanderWeele TJ, Ding P: Sensitivity analysis in observational research: introducing the E-value. Ann Intern Med 2017, 167(4):268–274. doi:10.7326/M16-2607.",
+      "paragraph": 125,
+      "block": 129
+    }
+  ],
+  "citations": [
+    {
+      "raw": "[1-3]",
+      "numbers": "1-3",
+      "paragraph": 15,
+      "context": "Sleep is now regarded as part of cardiovascular health rather than merely a symptom or lifestyle correlate. Duration, timing, regularity, quality, and sleep-disordered breathing may influence autonomic activity, metabolism, inflammation, coagulation, and endothelial function [1-3]. Current consensus recommendations generally support at least 7 h of sleep for healthy adults [4], but observational studies often describe higher cardiovascular risk at both short and long durations [5, 6]."
+    },
+    {
+      "raw": "[4]",
+      "numbers": "4",
+      "paragraph": 15,
+      "context": "Sleep is now regarded as part of cardiovascular health rather than merely a symptom or lifestyle correlate. Duration, timing, regularity, quality, and sleep-disordered breathing may influence autonomic activity, metabolism, inflammation, coagulation, and endothelial function [1-3]. Current consensus recommendations generally support at least 7 h of sleep for healthy adults [4], but observational studies often describe higher cardiovascular risk at both short and long durations [5, 6]."
+    },
+    {
+      "raw": "[5, 6]",
+      "numbers": "5, 6",
+      "paragraph": 15,
+      "context": "Sleep is now regarded as part of cardiovascular health rather than merely a symptom or lifestyle correlate. Duration, timing, regularity, quality, and sleep-disordered breathing may influence autonomic activity, metabolism, inflammation, coagulation, and endothelial function [1-3]. Current consensus recommendations generally support at least 7 h of sleep for healthy adults [4], but observational studies often describe higher cardiovascular risk at both short and long durations [5, 6]."
+    },
+    {
+      "raw": "[7]",
+      "numbers": "7",
+      "paragraph": 16,
+      "context": "The shape of this association remains unsettled. Results differ with the study population, outcome definition, sleep measurement, reference group, and degree of covariate control. A previous NHANES analysis reported a U-shaped relation between sleep duration and all-cause or broadly defined cardiovascular mortality, with the lowest risk around 7 h [7]. Heart disease mortality, however, is a more specific endpoint than composite cardiovascular mortality and may show a different pattern."
+    },
+    {
+      "raw": "[8, 9, 11–14]",
+      "numbers": "8, 9, 11–14",
+      "paragraph": 17,
+      "context": "Long sleep is especially difficult to interpret because it may reflect poor sleep quality, depression, low physical activity, socioeconomic disadvantage, sleep-disordered breathing, frailty, or occult disease rather than a direct harmful exposure [8, 9, 11–14]. Short sleep has stronger experimental links to sympathetic and inflammatory activation [10], creating a mismatch between the best-established mechanism and the strongest epidemiologic signal. We therefore prioritized an explicit estimand, longer reverse-causation lags, survey-cycle influence checks, quantitative bias analysis, and absolute risks rather than adding prediction models."
+    },
+    {
+      "raw": "[10]",
+      "numbers": "10",
+      "paragraph": 17,
+      "context": "Long sleep is especially difficult to interpret because it may reflect poor sleep quality, depression, low physical activity, socioeconomic disadvantage, sleep-disordered breathing, frailty, or occult disease rather than a direct harmful exposure [8, 9, 11–14]. Short sleep has stronger experimental links to sympathetic and inflammatory activation [10], creating a mismatch between the best-established mechanism and the strongest epidemiologic signal. We therefore prioritized an explicit estimand, longer reverse-causation lags, survey-cycle influence checks, quantitative bias analysis, and absolute risks rather than adding prediction models."
+    },
+    {
+      "raw": "[15]",
+      "numbers": "15",
+      "paragraph": 21,
+      "context": "This observational cohort study combined seven NHANES cycles from 2005–2006 through 2017–2018 and linked participants to public-use mortality follow-up. NHANES uses a multistage probability design to represent the noninstitutionalized US population [15]. Adults with eligible mortality follow-up and sleep duration from 3 to 11 h/night formed the analytic cohort (n=37,516). SIRI and SII were not required for cohort entry because they were exploratory rather than primary adjustment variables."
+    },
+    {
+      "raw": "[16–18]",
+      "numbers": "16–18",
+      "paragraph": 23,
+      "context": "Figure 1. Causal structures guiding model interpretation. Panel A shows the etiologic pathway of interest; Panel B shows an alternative in which underlying poor health causes both longer sleep and mortality. Solid arrows indicate assumed causal relations and dashed arrows mark temporally uncertain pathways. SIRI and SII were measured at the same baseline visit as sleep duration; therefore, pathway analyses are exploratory rather than causal mediation estimates [16–18]."
+    },
+    {
+      "raw": "[19]",
+      "numbers": "19",
+      "paragraph": 26,
+      "context": "Usual sleep duration was self-reported in hours per night and harmonized across cycles. It was analyzed in five clinically interpretable categories: <6, 6–<7, 7–<8, 8–<9, and ≥9 h/night, with 7–<8 h/night as the reference, and continuously with restricted cubic splines. The primary outcome was heart disease mortality, defined as MORTSTAT=1 and UCOD_LEADING=1. Other-cause deaths were censored in cause-specific Cox models and treated as competing events in Fine–Gray models [19]."
+    },
+    {
+      "raw": "[20]",
+      "numbers": "20",
+      "paragraph": 35,
+      "context": "Eligibility, exposure classification, and time zero were aligned at the NHANES examination [20]. The primary contrast was habitual sleep duration ≥9 versus 7–<8 h/night, followed from baseline to heart-disease death, competing death, or administrative censoring. The primary estimand was an observational survey-adjusted cause-specific hazard association under Model 2; the secondary risk-scale estimand was the regression-standardized 5- and 10-year cumulative incidence of heart-disease death accounting for competing deaths. These estimands describe associations rather than intervention effects: sleep duration was not randomized, a well-defined intervention corresponding to habitual sleep categories was not specified, and exchangeability cannot be guaranteed from the observed data."
+    },
+    {
+      "raw": "[15]",
+      "numbers": "15",
+      "paragraph": 37,
+      "context": "Baseline characteristics were summarized with the 14-year MEC weight (WTMEC2YR/7) without null-hypothesis tests [15]. Cause-specific Cox models incorporated NHANES sampling weights and design-based variance estimation using strata and PSUs. Survey design variables were audited after cycle pooling, including assessment of cross-cycle stratum and PSU uniqueness. Models 1–3 were compared using the same complete-case analytic sample. Sleep duration was modeled categorically and continuously using restricted cubic splines with prespecified knots at 5, 6, 7, 8, and 9 h/night; alternative percentile-based knots were examined in sensitivity analyses. Proportional hazards assumptions were evaluated using sleep-category × log(time) interactions."
+    },
+    {
+      "raw": "[21]",
+      "numbers": "21",
+      "paragraph": 38,
+      "context": "Potential reverse causation was explored by excluding prevalent CVD and using 2- and 5-year landmark analyses, including analyses restricted to comparable NHANES cycle composition. Missing covariates were addressed using 20 multiple imputations by chained equations incorporating exposure, outcomes, follow-up, survey design variables, and covariates [21]. Competing risks were evaluated using weighted Fine–Gray sensitivity analyses [19]. Regression-standardized cumulative incidence was estimated from cause-specific hazard models with uncertainty obtained from 500 stratified PSU bootstrap replicates [22]. Sensitivity to unmeasured confounding was examined using E-values and continuous bias contours [23]."
+    },
+    {
+      "raw": "[19]",
+      "numbers": "19",
+      "paragraph": 38,
+      "context": "Potential reverse causation was explored by excluding prevalent CVD and using 2- and 5-year landmark analyses, including analyses restricted to comparable NHANES cycle composition. Missing covariates were addressed using 20 multiple imputations by chained equations incorporating exposure, outcomes, follow-up, survey design variables, and covariates [21]. Competing risks were evaluated using weighted Fine–Gray sensitivity analyses [19]. Regression-standardized cumulative incidence was estimated from cause-specific hazard models with uncertainty obtained from 500 stratified PSU bootstrap replicates [22]. Sensitivity to unmeasured confounding was examined using E-values and continuous bias contours [23]."
+    },
+    {
+      "raw": "[22]",
+      "numbers": "22",
+      "paragraph": 38,
+      "context": "Potential reverse causation was explored by excluding prevalent CVD and using 2- and 5-year landmark analyses, including analyses restricted to comparable NHANES cycle composition. Missing covariates were addressed using 20 multiple imputations by chained equations incorporating exposure, outcomes, follow-up, survey design variables, and covariates [21]. Competing risks were evaluated using weighted Fine–Gray sensitivity analyses [19]. Regression-standardized cumulative incidence was estimated from cause-specific hazard models with uncertainty obtained from 500 stratified PSU bootstrap replicates [22]. Sensitivity to unmeasured confounding was examined using E-values and continuous bias contours [23]."
+    },
+    {
+      "raw": "[23]",
+      "numbers": "23",
+      "paragraph": 38,
+      "context": "Potential reverse causation was explored by excluding prevalent CVD and using 2- and 5-year landmark analyses, including analyses restricted to comparable NHANES cycle composition. Missing covariates were addressed using 20 multiple imputations by chained equations incorporating exposure, outcomes, follow-up, survey design variables, and covariates [21]. Competing risks were evaluated using weighted Fine–Gray sensitivity analyses [19]. Regression-standardized cumulative incidence was estimated from cause-specific hazard models with uncertainty obtained from 500 stratified PSU bootstrap replicates [22]. Sensitivity to unmeasured confounding was examined using E-values and continuous bias contours [23]."
+    }
+  ],
+  "media": [
+    {
+      "name": "word/media/image1.png",
+      "bytes": 109401,
+      "sha256": "c37d9572042c88bf1bd02b290b1010bfd28cb21d54baa5808d7a60957f58857e"
+    },
+    {
+      "name": "word/media/image2.png",
+      "bytes": 47024,
+      "sha256": "63a015b884c06de19cd91a5e241baf9fc4dbd3db0d2d2e9dd585fab54697449f"
+    },
+    {
+      "name": "word/media/image3.png",
+      "bytes": 64279,
+      "sha256": "d4ce34976fd655788fca20fcc2d65e53bf5c2835e50ef71d4bcc8a612eab3235"
+    },
+    {
+      "name": "word/media/image4.png",
+      "bytes": 149330,
+      "sha256": "572272e7565df834313db0975559e9eaa5e4c6948ed36290656a96957db0cdc1"
+    },
+    {
+      "name": "word/media/image5.png",
+      "bytes": 85784,
+      "sha256": "f171fce94bf1188687a531832a52e59f45726d5b3cc31b051401b52050f53dd1"
+    },
+    {
+      "name": "word/media/image6.png",
+      "bytes": 41421,
+      "sha256": "99def024e1626247955e479c7a33066e7a7282518f778bfcf8fe20e415bacf2c"
+    }
+  ],
+  "image_alt_text": [
+    {
+      "name": "Picture 1",
+      "title": "Two-panel causal diagram contrasting the etiologic pathway with reverse causation from underlying poor health.",
+      "description": "Two-panel causal diagram contrasting the etiologic pathway with reverse causation from underlying poor health."
+    },
+    {
+      "name": "Picture 2",
+      "title": "Restricted cubic spline hazard-ratio curves for sleep duration in the full cohort and the baseline CVD-free cohort.",
+      "description": "Restricted cubic spline hazard-ratio curves for sleep duration in the full cohort and the baseline CVD-free cohort."
+    },
+    {
+      "name": "Picture 7",
+      "title": "One-at-a-time and cumulative health-status adjustment estimates for long sleep.",
+      "description": "One-at-a-time and cumulative health-status adjustment estimates for long sleep."
+    },
+    {
+      "name": "Picture 8",
+      "title": "Robustness forest plots for the long-sleep association across sensitivity analyses and cycle exclusions.",
+      "description": "Robustness forest plots for the long-sleep association across sensitivity analyses and cycle exclusions."
+    },
+    {
+      "name": "Picture 9",
+      "title": "Regression-standardized cumulative incidence curves for heart-disease death by sleep-duration group.",
+      "description": "Regression-standardized cumulative incidence curves for heart-disease death by sleep-duration group."
+    },
+    {
+      "name": "Picture 3",
+      "title": "Restricted cubic spline geometric-mean-ratio curves for SIRI and SII across sleep duration.",
+      "description": "Restricted cubic spline geometric-mean-ratio curves for SIRI and SII across sleep duration."
+    }
+  ]
+}

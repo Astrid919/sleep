@@ -1,0 +1,125 @@
+{
+  "manuscript": "G:\\BMC原始工程文件\\结果-心因死亡\\outputs\\final_submission_package_20260810\\manuscript\\Manuscript_final_audited_20260810.docx",
+  "manuscript_sha256": "d979a429b826098f84a6c34b457160aedc5604162fdaee0ff8f45c412f971858",
+  "checks": [
+    {
+      "check": "reference_count_and_order",
+      "status": "PASS",
+      "detail": "references=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]"
+    },
+    {
+      "check": "citation_coverage",
+      "status": "PASS",
+      "detail": "cited=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23]"
+    },
+    {
+      "check": "verified_reference_text",
+      "status": "PASS",
+      "detail": "All reference paragraphs match verified metadata."
+    },
+    {
+      "check": "table1_cells",
+      "status": "PASS",
+      "detail": "rows=46"
+    },
+    {
+      "check": "table1_denominators",
+      "status": "PASS",
+      "detail": "Header denominators checked."
+    },
+    {
+      "check": "table2_cells",
+      "status": "PASS",
+      "detail": "All HRs, CIs, references, and global P values checked."
+    },
+    {
+      "check": "table3_cells",
+      "status": "PASS",
+      "detail": "All robustness estimates checked."
+    },
+    {
+      "check": "table4_cells",
+      "status": "PASS",
+      "detail": "All standardized risks and risk differences checked."
+    },
+    {
+      "check": "narrative_numeric_claims",
+      "status": "PASS",
+      "detail": "Key abstract/results claims checked against reproduced outputs."
+    },
+    {
+      "check": "bootstrap_500_convergence",
+      "status": "PASS",
+      "detail": "replicates=500"
+    },
+    {
+      "check": "embedded_figures",
+      "status": "PASS",
+      "detail": "matched=6/6"
+    },
+    {
+      "check": "code_syntax",
+      "status": "PASS",
+      "detail": "Parsed 16 Python scripts."
+    },
+    {
+      "check": "independent_numeric_reproduction",
+      "status": "PASS",
+      "detail": "{\"base_tsv\": \"18/18\", \"extension_tsv\": \"21/21\", \"legacy_png_note\": \"Legacy PNGs were renderer-level review items and were replaced; the separate embedded_figures check verifies the 6 final manuscript figures exactly.\"}"
+    },
+    {
+      "check": "clean_review_state",
+      "status": "PASS",
+      "detail": "comments=False; tracked_changes=False"
+    }
+  ],
+  "figures": [
+    {
+      "description": "Two-panel causal diagram contrasting the etiologic pathway with reverse causation from underlying poor health.",
+      "source": "G:\\BMC原始工程文件\\结果-心因死亡\\outputs\\final_submission_package_20260810\\reproduced_outputs\\base\\Figure1_causal_dag.png",
+      "embedded_sha256": "c37d9572042c88bf1bd02b290b1010bfd28cb21d54baa5808d7a60957f58857e",
+      "source_sha256": "c37d9572042c88bf1bd02b290b1010bfd28cb21d54baa5808d7a60957f58857e",
+      "status": "PASS"
+    },
+    {
+      "description": "Restricted cubic spline hazard-ratio curves for sleep duration in the full cohort and the baseline CVD-free cohort.",
+      "source": "G:\\BMC原始工程文件\\结果-心因死亡\\outputs\\final_submission_package_20260810\\reproduced_outputs\\base\\Figure2_sleep_mortality_rcs.png",
+      "embedded_sha256": "63a015b884c06de19cd91a5e241baf9fc4dbd3db0d2d2e9dd585fab54697449f",
+      "source_sha256": "63a015b884c06de19cd91a5e241baf9fc4dbd3db0d2d2e9dd585fab54697449f",
+      "status": "PASS"
+    },
+    {
+      "description": "One-at-a-time and cumulative health-status adjustment estimates for long sleep.",
+      "source": "G:\\BMC原始工程文件\\结果-心因死亡\\outputs\\final_submission_package_20260810\\reproduced_outputs\\extension\\Figure3_health_status_domain_attenuation.png",
+      "embedded_sha256": "d4ce34976fd655788fca20fcc2d65e53bf5c2835e50ef71d4bcc8a612eab3235",
+      "source_sha256": "d4ce34976fd655788fca20fcc2d65e53bf5c2835e50ef71d4bcc8a612eab3235",
+      "status": "PASS"
+    },
+    {
+      "description": "Robustness forest plots for the long-sleep association across sensitivity analyses and cycle exclusions.",
+      "source": "G:\\BMC原始工程文件\\结果-心因死亡\\outputs\\final_submission_package_20260810\\reproduced_outputs\\extension\\Figure4_robustness_forest.png",
+      "embedded_sha256": "572272e7565df834313db0975559e9eaa5e4c6948ed36290656a96957db0cdc1",
+      "source_sha256": "572272e7565df834313db0975559e9eaa5e4c6948ed36290656a96957db0cdc1",
+      "status": "PASS"
+    },
+    {
+      "description": "Regression-standardized cumulative incidence curves for heart-disease death by sleep-duration group.",
+      "source": "G:\\BMC原始工程文件\\结果-心因死亡\\outputs\\final_submission_package_20260810\\reproduced_outputs\\extension\\Figure5_standardized_cumulative_incidence.png",
+      "embedded_sha256": "f171fce94bf1188687a531832a52e59f45726d5b3cc31b051401b52050f53dd1",
+      "source_sha256": "f171fce94bf1188687a531832a52e59f45726d5b3cc31b051401b52050f53dd1",
+      "status": "PASS"
+    },
+    {
+      "description": "Restricted cubic spline geometric-mean-ratio curves for SIRI and SII across sleep duration.",
+      "source": "G:\\BMC原始工程文件\\结果-心因死亡\\outputs\\final_submission_package_20260810\\reproduced_outputs\\base\\Figure3_inflammation_pathway_rcs.png",
+      "embedded_sha256": "99def024e1626247955e479c7a33066e7a7282518f778bfcf8fe20e415bacf2c",
+      "source_sha256": "99def024e1626247955e479c7a33066e7a7282518f778bfcf8fe20e415bacf2c",
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "passed": 14,
+    "total": 14,
+    "failed": []
+  }
+}

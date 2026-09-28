@@ -1,0 +1,32 @@
+[
+  {
+    "archive_media": "word/media/image1.png",
+    "source": "G:\\BMC原始工程文件\\结果-心因死亡\\outputs\\final_submission_package_20260810\\reproduced_outputs\\base\\Figure1_causal_dag.png",
+    "alt_text": "Two-panel causal diagram contrasting the etiologic pathway with reverse causation from underlying poor health."
+  },
+  {
+    "archive_media": "word/media/image2.png",
+    "source": "G:\\BMC原始工程文件\\结果-心因死亡\\outputs\\final_submission_package_20260810\\reproduced_outputs\\base\\Figure2_sleep_mortality_rcs.png",
+    "alt_text": "Restricted cubic spline hazard-ratio curves for sleep duration in the full cohort and the baseline CVD-free cohort."
+  },
+  {
+    "archive_media": "word/media/image3.png",
+    "source": "G:\\BMC原始工程文件\\结果-心因死亡\\outputs\\final_submission_package_20260810\\reproduced_outputs\\extension\\Figure3_health_status_domain_attenuation.png",
+    "alt_text": "One-at-a-time and cumulative health-status adjustment estimates for long sleep."
+  },
+  {
+    "archive_media": "word/media/image4.png",
+    "source": "G:\\BMC原始工程文件\\结果-心因死亡\\outputs\\final_submission_package_20260810\\reproduced_outputs\\extension\\Figure4_robustness_forest.png",
+    "alt_text": "Robustness forest plots for the long-sleep association across sensitivity analyses and cycle exclusions."
+  },
+  {
+    "archive_media": "word/media/image5.png",
+    "source": "G:\\BMC原始工程文件\\结果-心因死亡\\outputs\\final_submission_package_20260810\\reproduced_outputs\\extension\\Figure5_standardized_cumulative_incidence.png",
+    "alt_text": "Regression-standardized cumulative incidence curves for heart-disease death by sleep-duration group."
+  },
+  {
+    "archive_media": "word/media/image6.png",
+    "source": "G:\\BMC原始工程文件\\结果-心因死亡\\outputs\\final_submission_package_20260810\\reproduced_outputs\\base\\Figure3_inflammation_pathway_rcs.png",
+    "alt_text": "Restricted cubic spline geometric-mean-ratio curves for SIRI and SII across sleep duration."
+  }
+]
