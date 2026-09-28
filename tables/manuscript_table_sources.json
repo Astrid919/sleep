@@ -1,0 +1,23 @@
+{
+  "Table 1": [
+    "reproduced_outputs/table1_source/table1_expanded_survey_weighted.tsv"
+  ],
+  "Table 2": [
+    "reproduced_outputs/base/causal_models_sleep_categories_summary.tsv"
+  ],
+  "Table 3": [
+    "reproduced_outputs/extension/reverse_causation_lag_2y_5y.tsv",
+    "reproduced_outputs/base/multiple_imputation_summary.tsv",
+    "reproduced_outputs/base/competing_risk_fine_gray_summary.tsv"
+  ],
+  "Table 4": [
+    "reproduced_outputs/extension/standardized_absolute_risk_horizons.tsv",
+    "reproduced_outputs/extension/standardized_absolute_risk_contrasts.tsv",
+    "reproduced_outputs/extension/standardized_cif_bootstrap_diagnostics.tsv"
+  ],
+  "Supplementary tables": [
+    "reproduced_outputs/base",
+    "reproduced_outputs/extension",
+    "reproduced_outputs/table1_source"
+  ]
+}
